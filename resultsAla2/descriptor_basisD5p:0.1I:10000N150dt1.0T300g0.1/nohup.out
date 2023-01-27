@@ -1,0 +1,25 @@
+[I 10:53:03.900 NotebookApp] Serving notebooks from local directory: /home/sipkam/DiffSim/PublicRepo/resultsAla2/descriptor_basisD5p:0.1I:10000N150dt1.0T300g0.1
+[I 10:53:03.900 NotebookApp] Jupyter Notebook 6.4.8 is running at:
+[I 10:53:03.900 NotebookApp] http://localhost:6546/?token=81cd3ca396d7b78ab5807fe80f2ff42fbedc2c8c9e1ab351
+[I 10:53:03.900 NotebookApp]  or http://127.0.0.1:6546/?token=81cd3ca396d7b78ab5807fe80f2ff42fbedc2c8c9e1ab351
+[I 10:53:03.900 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 10:53:03.902 NotebookApp] 
+    
+    To access the notebook, open this file in a browser:
+        file:///home/sipkam/.local/share/jupyter/runtime/nbserver-2142955-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:6546/?token=81cd3ca396d7b78ab5807fe80f2ff42fbedc2c8c9e1ab351
+     or http://127.0.0.1:6546/?token=81cd3ca396d7b78ab5807fe80f2ff42fbedc2c8c9e1ab351
+[I 10:53:35.225 NotebookApp] The port 6543 is already in use, trying another port.
+[I 10:53:35.225 NotebookApp] Serving notebooks from local directory: /home/sipkam/DiffSim/PublicRepo/resultsAla2/descriptor_basisD5p:0.1I:10000N150dt1.0T300g0.1
+[I 10:53:35.225 NotebookApp] Jupyter Notebook 6.4.8 is running at:
+[I 10:53:35.225 NotebookApp] http://localhost:6544/?token=20648db6cea37b60e2b252a3a3eca58fa58449ffeb853365
+[I 10:53:35.225 NotebookApp]  or http://127.0.0.1:6544/?token=20648db6cea37b60e2b252a3a3eca58fa58449ffeb853365
+[I 10:53:35.225 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 10:53:35.227 NotebookApp] 
+    
+    To access the notebook, open this file in a browser:
+        file:///home/sipkam/.local/share/jupyter/runtime/nbserver-2149566-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:6544/?token=20648db6cea37b60e2b252a3a3eca58fa58449ffeb853365
+     or http://127.0.0.1:6544/?token=20648db6cea37b60e2b252a3a3eca58fa58449ffeb853365

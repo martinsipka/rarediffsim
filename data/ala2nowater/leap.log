@@ -1,0 +1,2402 @@
+log started: Thu Oct 13 14:34:31 2022
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the ff14SB force field
+>> # ----- NOTE: this is designed for PDB format 3!
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "H"   "H" "sp3" }
+>> 	{ "HO"  "H" "sp3" }
+>> 	{ "HS"  "H" "sp3" }
+>> 	{ "H1"  "H" "sp3" }
+>> 	{ "H2"  "H" "sp3" }
+>> 	{ "H3"  "H" "sp3" }
+>> 	{ "H4"  "H" "sp3" }
+>> 	{ "H5"  "H" "sp3" }
+>> 	{ "HW"  "H" "sp3" }
+>> 	{ "HC"  "H" "sp3" }
+>> 	{ "HA"  "H" "sp3" }
+>> 	{ "HP"  "H" "sp3" }
+>> 	{ "HZ"  "H" "sp3" }
+>> 	{ "OH"  "O" "sp3" }
+>> 	{ "OS"  "O" "sp3" }
+>> 	{ "O"   "O" "sp2" }
+>> 	{ "O2"  "O" "sp2" }
+>> 	{ "OP"  "O" "sp2" }
+>> 	{ "OW"  "O" "sp3" }
+>> 	{ "CT"  "C" "sp3" }
+>> 	{ "CX"  "C" "sp3" }
+>> 	{ "C8"  "C" "sp3" }
+>> 	{ "2C"  "C" "sp3" }
+>> 	{ "3C"  "C" "sp3" }
+>> 	{ "CH"  "C" "sp3" }
+>> 	{ "CS"  "C" "sp2" }
+>> 	{ "C"   "C" "sp2" }
+>> 	{ "CO"   "C" "sp2" }
+>> 	{ "C*"  "C" "sp2" }
+>> 	{ "CA"  "C" "sp2" }
+>> 	{ "CB"  "C" "sp2" }
+>> 	{ "CC"  "C" "sp2" }
+>> 	{ "CN"  "C" "sp2" }
+>> 	{ "CM"  "C" "sp2" }
+>> 	{ "CK"  "C" "sp2" }
+>> 	{ "CQ"  "C" "sp2" }
+>> 	{ "CD"  "C" "sp2" }
+>> 	{ "C5"  "C" "sp2" }
+>> 	{ "C4"  "C" "sp2" }
+>> 	{ "CP"  "C" "sp2" }
+>> 	{ "CI"  "C" "sp3" }
+>> 	{ "CJ"  "C" "sp2" }
+>> 	{ "CW"  "C" "sp2" }
+>> 	{ "CV"  "C" "sp2" }
+>> 	{ "CR"  "C" "sp2" }
+>> 	{ "CA"  "C" "sp2" }
+>> 	{ "CY"  "C" "sp2" }
+>> 	{ "C0"  "Ca" "sp3" }
+>> 	{ "MG"  "Mg" "sp3" }
+>> 	{ "N"   "N" "sp2" }
+>> 	{ "NA"  "N" "sp2" }
+>> 	{ "N2"  "N" "sp2" }
+>> 	{ "N*"  "N" "sp2" }
+>> 	{ "NP"  "N" "sp2" }
+>> 	{ "NQ"  "N" "sp2" }
+>> 	{ "NB"  "N" "sp2" }
+>> 	{ "NC"  "N" "sp2" }
+>> 	{ "NT"  "N" "sp3" }
+>> 	{ "NY"  "N" "sp2" }
+>> 	{ "N3"  "N" "sp3" }
+>> 	{ "S"   "S" "sp3" }
+>> 	{ "SH"  "S" "sp3" }
+>> 	{ "P"   "P" "sp3" }
+>> 	{ "LP"  ""  "sp3" }
+>> 	{ "EP"  ""  "sp3" }
+>> 	{ "F"   "F" "sp3" }
+>> 	{ "Cl"  "Cl" "sp3" }
+>> 	{ "Br"  "Br" "sp3" }
+>> 	{ "I"   "I"  "sp3" }
+>> }
+>> #
+>> #	Load the main parameter set.
+>> #
+>> parm10 = loadamberparams parm10.dat
+Loading parameters: /home/martin/anaconda3/envs/torchmd/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+>> frcmod14SB = loadamberparams frcmod.ff14SB
+Loading parameters: /home/martin/anaconda3/envs/torchmd/dat/leap/parm/frcmod.ff14SB
+Reading force field modification type file (frcmod)
+Reading title:
+ff14SB protein backbone and sidechain parameters
+>> #
+>> #	Load main chain and terminating amino acid libraries
+>> #
+>> loadOff amino12.lib
+Loading library: /home/martin/anaconda3/envs/torchmd/dat/leap/lib/amino12.lib
+Loading: ALA
+Loading: ARG
+Loading: ASH
+Loading: ASN
+Loading: ASP
+Loading: CYM
+Loading: CYS
+Loading: CYX
+Loading: GLH
+Loading: GLN
+Loading: GLU
+Loading: GLY
+Loading: HID
+Loading: HIE
+Loading: HIP
+Loading: HYP
+Loading: ILE
+Loading: LEU
+Loading: LYN
+Loading: LYS
+Loading: MET
+Loading: PHE
+Loading: PRO
+Loading: SER
+Loading: THR
+Loading: TRP
+Loading: TYR
+Loading: VAL
+>> loadOff aminoct12.lib
+Loading library: /home/martin/anaconda3/envs/torchmd/dat/leap/lib/aminoct12.lib
+Loading: CALA
+Loading: CARG
+Loading: CASN
+Loading: CASP
+Loading: CCYS
+Loading: CCYX
+Loading: CGLN
+Loading: CGLU
+Loading: CGLY
+Loading: CHID
+Loading: CHIE
+Loading: CHIP
+Loading: CHYP
+Loading: CILE
+Loading: CLEU
+Loading: CLYS
+Loading: CMET
+Loading: CPHE
+Loading: CPRO
+Loading: CSER
+Loading: CTHR
+Loading: CTRP
+Loading: CTYR
+Loading: CVAL
+Loading: NHE
+Loading: NME
+>> loadOff aminont12.lib
+Loading library: /home/martin/anaconda3/envs/torchmd/dat/leap/lib/aminont12.lib
+Loading: ACE
+Loading: NALA
+Loading: NARG
+Loading: NASN
+Loading: NASP
+Loading: NCYS
+Loading: NCYX
+Loading: NGLN
+Loading: NGLU
+Loading: NGLY
+Loading: NHID
+Loading: NHIE
+Loading: NHIP
+Loading: NILE
+Loading: NLEU
+Loading: NLYS
+Loading: NMET
+Loading: NPHE
+Loading: NPRO
+Loading: NSER
+Loading: NTHR
+Loading: NTRP
+Loading: NTYR
+Loading: NVAL
+>> 
+>> #
+>> #	Define the PDB name map for the amino acids
+>> #
+>> addPdbResMap {
+>>   { 0 "HYP" "HYP" } { 1 "HYP" "CHYP" }
+>>   { 0 "ALA" "NALA" } { 1 "ALA" "CALA" }
+>>   { 0 "ARG" "NARG" } { 1 "ARG" "CARG" }
+>>   { 0 "ASN" "NASN" } { 1 "ASN" "CASN" }
+>>   { 0 "ASP" "NASP" } { 1 "ASP" "CASP" }
+>>   { 0 "CYS" "NCYS" } { 1 "CYS" "CCYS" }
+>>   { 0 "CYX" "NCYX" } { 1 "CYX" "CCYX" }
+>>   { 0 "GLN" "NGLN" } { 1 "GLN" "CGLN" }
+>>   { 0 "GLU" "NGLU" } { 1 "GLU" "CGLU" }
+>>   { 0 "GLY" "NGLY" } { 1 "GLY" "CGLY" }
+>>   { 0 "HID" "NHID" } { 1 "HID" "CHID" }
+>>   { 0 "HIE" "NHIE" } { 1 "HIE" "CHIE" }
+>>   { 0 "HIP" "NHIP" } { 1 "HIP" "CHIP" }
+>>   { 0 "ILE" "NILE" } { 1 "ILE" "CILE" }
+>>   { 0 "LEU" "NLEU" } { 1 "LEU" "CLEU" }
+>>   { 0 "LYS" "NLYS" } { 1 "LYS" "CLYS" }
+>>   { 0 "MET" "NMET" } { 1 "MET" "CMET" }
+>>   { 0 "PHE" "NPHE" } { 1 "PHE" "CPHE" }
+>>   { 0 "PRO" "NPRO" } { 1 "PRO" "CPRO" }
+>>   { 0 "SER" "NSER" } { 1 "SER" "CSER" }
+>>   { 0 "THR" "NTHR" } { 1 "THR" "CTHR" }
+>>   { 0 "TRP" "NTRP" } { 1 "TRP" "CTRP" }
+>>   { 0 "TYR" "NTYR" } { 1 "TYR" "CTYR" }
+>>   { 0 "VAL" "NVAL" } { 1 "VAL" "CVAL" }
+>>   { 0 "HIS" "NHIS" } { 1 "HIS" "CHIS" }
+>> }
+>> 
+>> #
+>> # assume that most often proteins use HIE
+>> #
+>> NHIS = NHIE
+>> HIS = HIE
+>> CHIS = CHIE
+> 
+> mol = loadPdb "structure.pdb"
+
+Error: Could not open file structure.pdb: not found
+> mol = loadPdb "structureSMOL.pdb"
+Loading PDB file: ./structureSMOL.pdb
+Matching PDB residue names to LEaP variables.
+Created a new atom named: HH31 within residue: .R<ACE 1>
+Created a new atom named: HH32 within residue: .R<ACE 1>
+Created a new atom named: HH33 within residue: .R<ACE 1>
+Created a new atom named: CH3 within residue: .R<NME 3>
+Created a new atom named: HH31 within residue: .R<NME 3>
+Created a new atom named: HH32 within residue: .R<NME 3>
+Created a new atom named: HH33 within residue: .R<NME 3>
+  Added missing heavy atom: .R<NME 3>.A<C 3>
+  total atoms in file: 22
+  Leap added 7 missing atoms according to residue templates:
+       1 Heavy
+       6 H / lone pairs
+  The file contained 7 atoms not in residue templates
+
+Warning: Since the number of added atoms equals the number of missing atoms, it is likely
+that some atoms had incorrect names; you may want to use addPdbAtomMap to map
+these names, or change the names in the PDB file.
+
+> /home/martin/Doktorat/MIT/Libraries/torchmd/test-data/prod_alanine_dipeptide_amber/input.xsc
+
+Error: Error from the parser: 
+       syntax error.
+       Check for typos, misspellings, etc.
+       Try help on the command name and desc on the command arguments.
+
+> saveamberparm mol ala2nw.prmtop ala2nw.crd
+Checking Unit.
+FATAL:  Atom .R<ACE 1>.A<HH31 7> does not have a type.
+FATAL:  Atom .R<ACE 1>.A<HH32 8> does not have a type.
+FATAL:  Atom .R<ACE 1>.A<HH33 9> does not have a type.
+FATAL:  Atom .R<NME 3>.A<CH3 7> does not have a type.
+FATAL:  Atom .R<NME 3>.A<HH31 8> does not have a type.
+FATAL:  Atom .R<NME 3>.A<HH32 9> does not have a type.
+FATAL:  Atom .R<NME 3>.A<HH33 10> does not have a type.
+
+Error: Failed to generate parameters
+
+Warning: Parameter file was not saved.
+> mol = loadPdb "structureSMOL.pdb"
+Loading PDB file: ./structureSMOL.pdb
+Matching PDB residue names to LEaP variables.
+Created a new atom named: HH31 within residue: .R<ACE 1>
+Created a new atom named: HH32 within residue: .R<ACE 1>
+Created a new atom named: HH33 within residue: .R<ACE 1>
+Created a new atom named: CH3 within residue: .R<NME 3>
+Created a new atom named: HH31 within residue: .R<NME 3>
+Created a new atom named: HH32 within residue: .R<NME 3>
+Created a new atom named: HH33 within residue: .R<NME 3>
+  Added missing heavy atom: .R<NME 3>.A<C 3>
+  total atoms in file: 22
+  Leap added 7 missing atoms according to residue templates:
+       1 Heavy
+       6 H / lone pairs
+  The file contained 7 atoms not in residue templates
+
+Warning: Since the number of added atoms equals the number of missing atoms, it is likely
+that some atoms had incorrect names; you may want to use addPdbAtomMap to map
+these names, or change the names in the PDB file.
+
+> saveamberparm mol ala2nw.prmtop ala2nw.crd
+Checking Unit.
+FATAL:  Atom .R<ACE 1>.A<HH31 7> does not have a type.
+FATAL:  Atom .R<ACE 1>.A<HH32 8> does not have a type.
+FATAL:  Atom .R<ACE 1>.A<HH33 9> does not have a type.
+FATAL:  Atom .R<NME 3>.A<CH3 7> does not have a type.
+FATAL:  Atom .R<NME 3>.A<HH31 8> does not have a type.
+FATAL:  Atom .R<NME 3>.A<HH32 9> does not have a type.
+FATAL:  Atom .R<NME 3>.A<HH33 10> does not have a type.
+
+Error: Failed to generate parameters
+
+Warning: Parameter file was not saved.
+log started: Thu Oct 13 14:38:45 2022
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the ff14SB force field
+>> # ----- NOTE: this is designed for PDB format 3!
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "H"   "H" "sp3" }
+>> 	{ "HO"  "H" "sp3" }
+>> 	{ "HS"  "H" "sp3" }
+>> 	{ "H1"  "H" "sp3" }
+>> 	{ "H2"  "H" "sp3" }
+>> 	{ "H3"  "H" "sp3" }
+>> 	{ "H4"  "H" "sp3" }
+>> 	{ "H5"  "H" "sp3" }
+>> 	{ "HW"  "H" "sp3" }
+>> 	{ "HC"  "H" "sp3" }
+>> 	{ "HA"  "H" "sp3" }
+>> 	{ "HP"  "H" "sp3" }
+>> 	{ "HZ"  "H" "sp3" }
+>> 	{ "OH"  "O" "sp3" }
+>> 	{ "OS"  "O" "sp3" }
+>> 	{ "O"   "O" "sp2" }
+>> 	{ "O2"  "O" "sp2" }
+>> 	{ "OP"  "O" "sp2" }
+>> 	{ "OW"  "O" "sp3" }
+>> 	{ "CT"  "C" "sp3" }
+>> 	{ "CX"  "C" "sp3" }
+>> 	{ "C8"  "C" "sp3" }
+>> 	{ "2C"  "C" "sp3" }
+>> 	{ "3C"  "C" "sp3" }
+>> 	{ "CH"  "C" "sp3" }
+>> 	{ "CS"  "C" "sp2" }
+>> 	{ "C"   "C" "sp2" }
+>> 	{ "CO"   "C" "sp2" }
+>> 	{ "C*"  "C" "sp2" }
+>> 	{ "CA"  "C" "sp2" }
+>> 	{ "CB"  "C" "sp2" }
+>> 	{ "CC"  "C" "sp2" }
+>> 	{ "CN"  "C" "sp2" }
+>> 	{ "CM"  "C" "sp2" }
+>> 	{ "CK"  "C" "sp2" }
+>> 	{ "CQ"  "C" "sp2" }
+>> 	{ "CD"  "C" "sp2" }
+>> 	{ "C5"  "C" "sp2" }
+>> 	{ "C4"  "C" "sp2" }
+>> 	{ "CP"  "C" "sp2" }
+>> 	{ "CI"  "C" "sp3" }
+>> 	{ "CJ"  "C" "sp2" }
+>> 	{ "CW"  "C" "sp2" }
+>> 	{ "CV"  "C" "sp2" }
+>> 	{ "CR"  "C" "sp2" }
+>> 	{ "CA"  "C" "sp2" }
+>> 	{ "CY"  "C" "sp2" }
+>> 	{ "C0"  "Ca" "sp3" }
+>> 	{ "MG"  "Mg" "sp3" }
+>> 	{ "N"   "N" "sp2" }
+>> 	{ "NA"  "N" "sp2" }
+>> 	{ "N2"  "N" "sp2" }
+>> 	{ "N*"  "N" "sp2" }
+>> 	{ "NP"  "N" "sp2" }
+>> 	{ "NQ"  "N" "sp2" }
+>> 	{ "NB"  "N" "sp2" }
+>> 	{ "NC"  "N" "sp2" }
+>> 	{ "NT"  "N" "sp3" }
+>> 	{ "NY"  "N" "sp2" }
+>> 	{ "N3"  "N" "sp3" }
+>> 	{ "S"   "S" "sp3" }
+>> 	{ "SH"  "S" "sp3" }
+>> 	{ "P"   "P" "sp3" }
+>> 	{ "LP"  ""  "sp3" }
+>> 	{ "EP"  ""  "sp3" }
+>> 	{ "F"   "F" "sp3" }
+>> 	{ "Cl"  "Cl" "sp3" }
+>> 	{ "Br"  "Br" "sp3" }
+>> 	{ "I"   "I"  "sp3" }
+>> }
+>> #
+>> #	Load the main parameter set.
+>> #
+>> parm10 = loadamberparams parm10.dat
+Loading parameters: /home/martin/anaconda3/envs/torchmd/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+>> frcmod14SB = loadamberparams frcmod.ff14SB
+Loading parameters: /home/martin/anaconda3/envs/torchmd/dat/leap/parm/frcmod.ff14SB
+Reading force field modification type file (frcmod)
+Reading title:
+ff14SB protein backbone and sidechain parameters
+>> #
+>> #	Load main chain and terminating amino acid libraries
+>> #
+>> loadOff amino12.lib
+Loading library: /home/martin/anaconda3/envs/torchmd/dat/leap/lib/amino12.lib
+Loading: ALA
+Loading: ARG
+Loading: ASH
+Loading: ASN
+Loading: ASP
+Loading: CYM
+Loading: CYS
+Loading: CYX
+Loading: GLH
+Loading: GLN
+Loading: GLU
+Loading: GLY
+Loading: HID
+Loading: HIE
+Loading: HIP
+Loading: HYP
+Loading: ILE
+Loading: LEU
+Loading: LYN
+Loading: LYS
+Loading: MET
+Loading: PHE
+Loading: PRO
+Loading: SER
+Loading: THR
+Loading: TRP
+Loading: TYR
+Loading: VAL
+>> loadOff aminoct12.lib
+Loading library: /home/martin/anaconda3/envs/torchmd/dat/leap/lib/aminoct12.lib
+Loading: CALA
+Loading: CARG
+Loading: CASN
+Loading: CASP
+Loading: CCYS
+Loading: CCYX
+Loading: CGLN
+Loading: CGLU
+Loading: CGLY
+Loading: CHID
+Loading: CHIE
+Loading: CHIP
+Loading: CHYP
+Loading: CILE
+Loading: CLEU
+Loading: CLYS
+Loading: CMET
+Loading: CPHE
+Loading: CPRO
+Loading: CSER
+Loading: CTHR
+Loading: CTRP
+Loading: CTYR
+Loading: CVAL
+Loading: NHE
+Loading: NME
+>> loadOff aminont12.lib
+Loading library: /home/martin/anaconda3/envs/torchmd/dat/leap/lib/aminont12.lib
+Loading: ACE
+Loading: NALA
+Loading: NARG
+Loading: NASN
+Loading: NASP
+Loading: NCYS
+Loading: NCYX
+Loading: NGLN
+Loading: NGLU
+Loading: NGLY
+Loading: NHID
+Loading: NHIE
+Loading: NHIP
+Loading: NILE
+Loading: NLEU
+Loading: NLYS
+Loading: NMET
+Loading: NPHE
+Loading: NPRO
+Loading: NSER
+Loading: NTHR
+Loading: NTRP
+Loading: NTYR
+Loading: NVAL
+>> 
+>> #
+>> #	Define the PDB name map for the amino acids
+>> #
+>> addPdbResMap {
+>>   { 0 "HYP" "HYP" } { 1 "HYP" "CHYP" }
+>>   { 0 "ALA" "NALA" } { 1 "ALA" "CALA" }
+>>   { 0 "ARG" "NARG" } { 1 "ARG" "CARG" }
+>>   { 0 "ASN" "NASN" } { 1 "ASN" "CASN" }
+>>   { 0 "ASP" "NASP" } { 1 "ASP" "CASP" }
+>>   { 0 "CYS" "NCYS" } { 1 "CYS" "CCYS" }
+>>   { 0 "CYX" "NCYX" } { 1 "CYX" "CCYX" }
+>>   { 0 "GLN" "NGLN" } { 1 "GLN" "CGLN" }
+>>   { 0 "GLU" "NGLU" } { 1 "GLU" "CGLU" }
+>>   { 0 "GLY" "NGLY" } { 1 "GLY" "CGLY" }
+>>   { 0 "HID" "NHID" } { 1 "HID" "CHID" }
+>>   { 0 "HIE" "NHIE" } { 1 "HIE" "CHIE" }
+>>   { 0 "HIP" "NHIP" } { 1 "HIP" "CHIP" }
+>>   { 0 "ILE" "NILE" } { 1 "ILE" "CILE" }
+>>   { 0 "LEU" "NLEU" } { 1 "LEU" "CLEU" }
+>>   { 0 "LYS" "NLYS" } { 1 "LYS" "CLYS" }
+>>   { 0 "MET" "NMET" } { 1 "MET" "CMET" }
+>>   { 0 "PHE" "NPHE" } { 1 "PHE" "CPHE" }
+>>   { 0 "PRO" "NPRO" } { 1 "PRO" "CPRO" }
+>>   { 0 "SER" "NSER" } { 1 "SER" "CSER" }
+>>   { 0 "THR" "NTHR" } { 1 "THR" "CTHR" }
+>>   { 0 "TRP" "NTRP" } { 1 "TRP" "CTRP" }
+>>   { 0 "TYR" "NTYR" } { 1 "TYR" "CTYR" }
+>>   { 0 "VAL" "NVAL" } { 1 "VAL" "CVAL" }
+>>   { 0 "HIS" "NHIS" } { 1 "HIS" "CHIS" }
+>> }
+>> 
+>> #
+>> # assume that most often proteins use HIE
+>> #
+>> NHIS = NHIE
+>> HIS = HIE
+>> CHIS = CHIE
+> 
+> mol = loadPdb "structureSMOL.pdb"
+Loading PDB file: ./structureSMOL.pdb
+Matching PDB residue names to LEaP variables.
+Created a new atom named: HH31 within residue: .R<ACE 1>
+Created a new atom named: HH32 within residue: .R<ACE 1>
+Created a new atom named: HH33 within residue: .R<ACE 1>
+Created a new atom named: CH3 within residue: .R<NME 3>
+Created a new atom named: HH31 within residue: .R<NME 3>
+Created a new atom named: HH32 within residue: .R<NME 3>
+Created a new atom named: HH33 within residue: .R<NME 3>
+  Added missing heavy atom: .R<NME 3>.A<C 3>
+  total atoms in file: 22
+  Leap added 7 missing atoms according to residue templates:
+       1 Heavy
+       6 H / lone pairs
+  The file contained 7 atoms not in residue templates
+
+Warning: Since the number of added atoms equals the number of missing atoms, it is likely
+that some atoms had incorrect names; you may want to use addPdbAtomMap to map
+these names, or change the names in the PDB file.
+
+> mol = loadPdb "structureSMOL.pdb"
+Loading PDB file: ./structureSMOL.pdb
+Matching PDB residue names to LEaP variables.
+
+Warning: Unknown residue: WAT   number: 3   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 4   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 5   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 6   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 7   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 8   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 9   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 10   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 11   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 12   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 13   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 14   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 15   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 16   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 17   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 18   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 19   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 20   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 21   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 22   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 23   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 24   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 25   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 26   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 27   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 28   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 29   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 30   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 31   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 32   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 33   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 34   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 35   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 36   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 37   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 38   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 39   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 40   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 41   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 42   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 43   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 44   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 45   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 46   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 47   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 48   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 49   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 50   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 51   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 52   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 53   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 54   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 55   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 56   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 57   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 58   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 59   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 60   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 61   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 62   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 63   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 64   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 65   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 66   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 67   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 68   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 69   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 70   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 71   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 72   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 73   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 74   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 75   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 76   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 77   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 78   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 79   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 80   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 81   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 82   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 83   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 84   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 85   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 86   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 87   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 88   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 89   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 90   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 91   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 92   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 93   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 94   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 95   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 96   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 97   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 98   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 99   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 100   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 101   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 102   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 103   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 104   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 105   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 106   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 107   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 108   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 109   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 110   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 111   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 112   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 113   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 114   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 115   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 116   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 117   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 118   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 119   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 120   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 121   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 122   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 123   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 124   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 125   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 126   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 127   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 128   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 129   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 130   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 131   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 132   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 133   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 134   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 135   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 136   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 137   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 138   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 139   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 140   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 141   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 142   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 143   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 144   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 145   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 146   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 147   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 148   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 149   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 150   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 151   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 152   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 153   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 154   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 155   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 156   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 157   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 158   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 159   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 160   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 161   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 162   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 163   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 164   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 165   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 166   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 167   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 168   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 169   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 170   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 171   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 172   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 173   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 174   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 175   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 176   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 177   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 178   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 179   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 180   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 181   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 182   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 183   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 184   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 185   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 186   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 187   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 188   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 189   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 190   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 191   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 192   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 193   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 194   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 195   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 196   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 197   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 198   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 199   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 200   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 201   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 202   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 203   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 204   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 205   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 206   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 207   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 208   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 209   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 210   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 211   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 212   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 213   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 214   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 215   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 216   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 217   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 218   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 219   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 220   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 221   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 222   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 223   type: Nonterminal
+
+Warning: Unknown residue: WAT   number: 224   type: Terminal/last
+..relaxing end constraints to try for a dbase match
+
+Warning:   -no luck
+Created a new atom named: HH31 within residue: .R<ACE 1>
+Created a new atom named: HH32 within residue: .R<ACE 1>
+Created a new atom named: HH33 within residue: .R<ACE 1>
+Created a new atom named: CH3 within residue: .R<NME 3>
+Created a new atom named: HH31 within residue: .R<NME 3>
+Created a new atom named: HH32 within residue: .R<NME 3>
+Created a new atom named: HH33 within residue: .R<NME 3>
+  Added missing heavy atom: .R<NME 3>.A<C 3>
+Creating new UNIT for residue: WAT sequence: 4
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 4>
+Created a new atom named: H1 within residue: .R<WAT 4>
+Created a new atom named: H2 within residue: .R<WAT 4>
+Creating new UNIT for residue: WAT sequence: 5
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 5>
+Created a new atom named: H1 within residue: .R<WAT 5>
+Created a new atom named: H2 within residue: .R<WAT 5>
+Creating new UNIT for residue: WAT sequence: 6
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 6>
+Created a new atom named: H1 within residue: .R<WAT 6>
+Created a new atom named: H2 within residue: .R<WAT 6>
+Creating new UNIT for residue: WAT sequence: 7
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 7>
+Created a new atom named: H1 within residue: .R<WAT 7>
+Created a new atom named: H2 within residue: .R<WAT 7>
+Creating new UNIT for residue: WAT sequence: 8
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 8>
+Created a new atom named: H1 within residue: .R<WAT 8>
+Created a new atom named: H2 within residue: .R<WAT 8>
+Creating new UNIT for residue: WAT sequence: 9
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 9>
+Created a new atom named: H1 within residue: .R<WAT 9>
+Created a new atom named: H2 within residue: .R<WAT 9>
+Creating new UNIT for residue: WAT sequence: 10
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 10>
+Created a new atom named: H1 within residue: .R<WAT 10>
+Created a new atom named: H2 within residue: .R<WAT 10>
+Creating new UNIT for residue: WAT sequence: 11
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 11>
+Created a new atom named: H1 within residue: .R<WAT 11>
+Created a new atom named: H2 within residue: .R<WAT 11>
+Creating new UNIT for residue: WAT sequence: 12
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 12>
+Created a new atom named: H1 within residue: .R<WAT 12>
+Created a new atom named: H2 within residue: .R<WAT 12>
+Creating new UNIT for residue: WAT sequence: 13
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 13>
+Created a new atom named: H1 within residue: .R<WAT 13>
+Created a new atom named: H2 within residue: .R<WAT 13>
+Creating new UNIT for residue: WAT sequence: 14
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 14>
+Created a new atom named: H1 within residue: .R<WAT 14>
+Created a new atom named: H2 within residue: .R<WAT 14>
+Creating new UNIT for residue: WAT sequence: 15
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 15>
+Created a new atom named: H1 within residue: .R<WAT 15>
+Created a new atom named: H2 within residue: .R<WAT 15>
+Creating new UNIT for residue: WAT sequence: 16
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 16>
+Created a new atom named: H1 within residue: .R<WAT 16>
+Created a new atom named: H2 within residue: .R<WAT 16>
+Creating new UNIT for residue: WAT sequence: 17
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 17>
+Created a new atom named: H1 within residue: .R<WAT 17>
+Created a new atom named: H2 within residue: .R<WAT 17>
+Creating new UNIT for residue: WAT sequence: 18
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 18>
+Created a new atom named: H1 within residue: .R<WAT 18>
+Created a new atom named: H2 within residue: .R<WAT 18>
+Creating new UNIT for residue: WAT sequence: 19
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 19>
+Created a new atom named: H1 within residue: .R<WAT 19>
+Created a new atom named: H2 within residue: .R<WAT 19>
+Creating new UNIT for residue: WAT sequence: 20
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 20>
+Created a new atom named: H1 within residue: .R<WAT 20>
+Created a new atom named: H2 within residue: .R<WAT 20>
+Creating new UNIT for residue: WAT sequence: 21
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 21>
+Created a new atom named: H1 within residue: .R<WAT 21>
+Created a new atom named: H2 within residue: .R<WAT 21>
+Creating new UNIT for residue: WAT sequence: 22
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 22>
+Created a new atom named: H1 within residue: .R<WAT 22>
+Created a new atom named: H2 within residue: .R<WAT 22>
+Creating new UNIT for residue: WAT sequence: 23
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 23>
+Created a new atom named: H1 within residue: .R<WAT 23>
+Created a new atom named: H2 within residue: .R<WAT 23>
+Creating new UNIT for residue: WAT sequence: 24
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 24>
+Created a new atom named: H1 within residue: .R<WAT 24>
+Created a new atom named: H2 within residue: .R<WAT 24>
+Creating new UNIT for residue: WAT sequence: 25
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 25>
+Created a new atom named: H1 within residue: .R<WAT 25>
+Created a new atom named: H2 within residue: .R<WAT 25>
+Creating new UNIT for residue: WAT sequence: 26
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 26>
+Created a new atom named: H1 within residue: .R<WAT 26>
+Created a new atom named: H2 within residue: .R<WAT 26>
+Creating new UNIT for residue: WAT sequence: 27
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 27>
+Created a new atom named: H1 within residue: .R<WAT 27>
+Created a new atom named: H2 within residue: .R<WAT 27>
+Creating new UNIT for residue: WAT sequence: 28
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 28>
+Created a new atom named: H1 within residue: .R<WAT 28>
+Created a new atom named: H2 within residue: .R<WAT 28>
+Creating new UNIT for residue: WAT sequence: 29
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 29>
+Created a new atom named: H1 within residue: .R<WAT 29>
+Created a new atom named: H2 within residue: .R<WAT 29>
+Creating new UNIT for residue: WAT sequence: 30
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 30>
+Created a new atom named: H1 within residue: .R<WAT 30>
+Created a new atom named: H2 within residue: .R<WAT 30>
+Creating new UNIT for residue: WAT sequence: 31
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 31>
+Created a new atom named: H1 within residue: .R<WAT 31>
+Created a new atom named: H2 within residue: .R<WAT 31>
+Creating new UNIT for residue: WAT sequence: 32
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 32>
+Created a new atom named: H1 within residue: .R<WAT 32>
+Created a new atom named: H2 within residue: .R<WAT 32>
+Creating new UNIT for residue: WAT sequence: 33
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 33>
+Created a new atom named: H1 within residue: .R<WAT 33>
+Created a new atom named: H2 within residue: .R<WAT 33>
+Creating new UNIT for residue: WAT sequence: 34
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 34>
+Created a new atom named: H1 within residue: .R<WAT 34>
+Created a new atom named: H2 within residue: .R<WAT 34>
+Creating new UNIT for residue: WAT sequence: 35
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 35>
+Created a new atom named: H1 within residue: .R<WAT 35>
+Created a new atom named: H2 within residue: .R<WAT 35>
+Creating new UNIT for residue: WAT sequence: 36
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 36>
+Created a new atom named: H1 within residue: .R<WAT 36>
+Created a new atom named: H2 within residue: .R<WAT 36>
+Creating new UNIT for residue: WAT sequence: 37
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 37>
+Created a new atom named: H1 within residue: .R<WAT 37>
+Created a new atom named: H2 within residue: .R<WAT 37>
+Creating new UNIT for residue: WAT sequence: 38
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 38>
+Created a new atom named: H1 within residue: .R<WAT 38>
+Created a new atom named: H2 within residue: .R<WAT 38>
+Creating new UNIT for residue: WAT sequence: 39
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 39>
+Created a new atom named: H1 within residue: .R<WAT 39>
+Created a new atom named: H2 within residue: .R<WAT 39>
+Creating new UNIT for residue: WAT sequence: 40
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 40>
+Created a new atom named: H1 within residue: .R<WAT 40>
+Created a new atom named: H2 within residue: .R<WAT 40>
+Creating new UNIT for residue: WAT sequence: 41
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 41>
+Created a new atom named: H1 within residue: .R<WAT 41>
+Created a new atom named: H2 within residue: .R<WAT 41>
+Creating new UNIT for residue: WAT sequence: 42
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 42>
+Created a new atom named: H1 within residue: .R<WAT 42>
+Created a new atom named: H2 within residue: .R<WAT 42>
+Creating new UNIT for residue: WAT sequence: 43
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 43>
+Created a new atom named: H1 within residue: .R<WAT 43>
+Created a new atom named: H2 within residue: .R<WAT 43>
+Creating new UNIT for residue: WAT sequence: 44
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 44>
+Created a new atom named: H1 within residue: .R<WAT 44>
+Created a new atom named: H2 within residue: .R<WAT 44>
+Creating new UNIT for residue: WAT sequence: 45
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 45>
+Created a new atom named: H1 within residue: .R<WAT 45>
+Created a new atom named: H2 within residue: .R<WAT 45>
+Creating new UNIT for residue: WAT sequence: 46
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 46>
+Created a new atom named: H1 within residue: .R<WAT 46>
+Created a new atom named: H2 within residue: .R<WAT 46>
+Creating new UNIT for residue: WAT sequence: 47
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 47>
+Created a new atom named: H1 within residue: .R<WAT 47>
+Created a new atom named: H2 within residue: .R<WAT 47>
+Creating new UNIT for residue: WAT sequence: 48
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 48>
+Created a new atom named: H1 within residue: .R<WAT 48>
+Created a new atom named: H2 within residue: .R<WAT 48>
+Creating new UNIT for residue: WAT sequence: 49
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 49>
+Created a new atom named: H1 within residue: .R<WAT 49>
+Created a new atom named: H2 within residue: .R<WAT 49>
+Creating new UNIT for residue: WAT sequence: 50
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 50>
+Created a new atom named: H1 within residue: .R<WAT 50>
+Created a new atom named: H2 within residue: .R<WAT 50>
+Creating new UNIT for residue: WAT sequence: 51
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 51>
+Created a new atom named: H1 within residue: .R<WAT 51>
+Created a new atom named: H2 within residue: .R<WAT 51>
+Creating new UNIT for residue: WAT sequence: 52
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 52>
+Created a new atom named: H1 within residue: .R<WAT 52>
+Created a new atom named: H2 within residue: .R<WAT 52>
+Creating new UNIT for residue: WAT sequence: 53
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 53>
+Created a new atom named: H1 within residue: .R<WAT 53>
+Created a new atom named: H2 within residue: .R<WAT 53>
+Creating new UNIT for residue: WAT sequence: 54
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 54>
+Created a new atom named: H1 within residue: .R<WAT 54>
+Created a new atom named: H2 within residue: .R<WAT 54>
+Creating new UNIT for residue: WAT sequence: 55
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 55>
+Created a new atom named: H1 within residue: .R<WAT 55>
+Created a new atom named: H2 within residue: .R<WAT 55>
+Creating new UNIT for residue: WAT sequence: 56
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 56>
+Created a new atom named: H1 within residue: .R<WAT 56>
+Created a new atom named: H2 within residue: .R<WAT 56>
+Creating new UNIT for residue: WAT sequence: 57
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 57>
+Created a new atom named: H1 within residue: .R<WAT 57>
+Created a new atom named: H2 within residue: .R<WAT 57>
+Creating new UNIT for residue: WAT sequence: 58
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 58>
+Created a new atom named: H1 within residue: .R<WAT 58>
+Created a new atom named: H2 within residue: .R<WAT 58>
+Creating new UNIT for residue: WAT sequence: 59
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 59>
+Created a new atom named: H1 within residue: .R<WAT 59>
+Created a new atom named: H2 within residue: .R<WAT 59>
+Creating new UNIT for residue: WAT sequence: 60
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 60>
+Created a new atom named: H1 within residue: .R<WAT 60>
+Created a new atom named: H2 within residue: .R<WAT 60>
+Creating new UNIT for residue: WAT sequence: 61
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 61>
+Created a new atom named: H1 within residue: .R<WAT 61>
+Created a new atom named: H2 within residue: .R<WAT 61>
+Creating new UNIT for residue: WAT sequence: 62
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 62>
+Created a new atom named: H1 within residue: .R<WAT 62>
+Created a new atom named: H2 within residue: .R<WAT 62>
+Creating new UNIT for residue: WAT sequence: 63
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 63>
+Created a new atom named: H1 within residue: .R<WAT 63>
+Created a new atom named: H2 within residue: .R<WAT 63>
+Creating new UNIT for residue: WAT sequence: 64
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 64>
+Created a new atom named: H1 within residue: .R<WAT 64>
+Created a new atom named: H2 within residue: .R<WAT 64>
+Creating new UNIT for residue: WAT sequence: 65
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 65>
+Created a new atom named: H1 within residue: .R<WAT 65>
+Created a new atom named: H2 within residue: .R<WAT 65>
+Creating new UNIT for residue: WAT sequence: 66
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 66>
+Created a new atom named: H1 within residue: .R<WAT 66>
+Created a new atom named: H2 within residue: .R<WAT 66>
+Creating new UNIT for residue: WAT sequence: 67
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 67>
+Created a new atom named: H1 within residue: .R<WAT 67>
+Created a new atom named: H2 within residue: .R<WAT 67>
+Creating new UNIT for residue: WAT sequence: 68
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 68>
+Created a new atom named: H1 within residue: .R<WAT 68>
+Created a new atom named: H2 within residue: .R<WAT 68>
+Creating new UNIT for residue: WAT sequence: 69
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 69>
+Created a new atom named: H1 within residue: .R<WAT 69>
+Created a new atom named: H2 within residue: .R<WAT 69>
+Creating new UNIT for residue: WAT sequence: 70
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 70>
+Created a new atom named: H1 within residue: .R<WAT 70>
+Created a new atom named: H2 within residue: .R<WAT 70>
+Creating new UNIT for residue: WAT sequence: 71
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 71>
+Created a new atom named: H1 within residue: .R<WAT 71>
+Created a new atom named: H2 within residue: .R<WAT 71>
+Creating new UNIT for residue: WAT sequence: 72
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 72>
+Created a new atom named: H1 within residue: .R<WAT 72>
+Created a new atom named: H2 within residue: .R<WAT 72>
+Creating new UNIT for residue: WAT sequence: 73
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 73>
+Created a new atom named: H1 within residue: .R<WAT 73>
+Created a new atom named: H2 within residue: .R<WAT 73>
+Creating new UNIT for residue: WAT sequence: 74
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 74>
+Created a new atom named: H1 within residue: .R<WAT 74>
+Created a new atom named: H2 within residue: .R<WAT 74>
+Creating new UNIT for residue: WAT sequence: 75
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 75>
+Created a new atom named: H1 within residue: .R<WAT 75>
+Created a new atom named: H2 within residue: .R<WAT 75>
+Creating new UNIT for residue: WAT sequence: 76
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 76>
+Created a new atom named: H1 within residue: .R<WAT 76>
+Created a new atom named: H2 within residue: .R<WAT 76>
+Creating new UNIT for residue: WAT sequence: 77
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 77>
+Created a new atom named: H1 within residue: .R<WAT 77>
+Created a new atom named: H2 within residue: .R<WAT 77>
+Creating new UNIT for residue: WAT sequence: 78
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 78>
+Created a new atom named: H1 within residue: .R<WAT 78>
+Created a new atom named: H2 within residue: .R<WAT 78>
+Creating new UNIT for residue: WAT sequence: 79
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 79>
+Created a new atom named: H1 within residue: .R<WAT 79>
+Created a new atom named: H2 within residue: .R<WAT 79>
+Creating new UNIT for residue: WAT sequence: 80
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 80>
+Created a new atom named: H1 within residue: .R<WAT 80>
+Created a new atom named: H2 within residue: .R<WAT 80>
+Creating new UNIT for residue: WAT sequence: 81
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 81>
+Created a new atom named: H1 within residue: .R<WAT 81>
+Created a new atom named: H2 within residue: .R<WAT 81>
+Creating new UNIT for residue: WAT sequence: 82
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 82>
+Created a new atom named: H1 within residue: .R<WAT 82>
+Created a new atom named: H2 within residue: .R<WAT 82>
+Creating new UNIT for residue: WAT sequence: 83
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 83>
+Created a new atom named: H1 within residue: .R<WAT 83>
+Created a new atom named: H2 within residue: .R<WAT 83>
+Creating new UNIT for residue: WAT sequence: 84
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 84>
+Created a new atom named: H1 within residue: .R<WAT 84>
+Created a new atom named: H2 within residue: .R<WAT 84>
+Creating new UNIT for residue: WAT sequence: 85
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 85>
+Created a new atom named: H1 within residue: .R<WAT 85>
+Created a new atom named: H2 within residue: .R<WAT 85>
+Creating new UNIT for residue: WAT sequence: 86
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 86>
+Created a new atom named: H1 within residue: .R<WAT 86>
+Created a new atom named: H2 within residue: .R<WAT 86>
+Creating new UNIT for residue: WAT sequence: 87
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 87>
+Created a new atom named: H1 within residue: .R<WAT 87>
+Created a new atom named: H2 within residue: .R<WAT 87>
+Creating new UNIT for residue: WAT sequence: 88
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 88>
+Created a new atom named: H1 within residue: .R<WAT 88>
+Created a new atom named: H2 within residue: .R<WAT 88>
+Creating new UNIT for residue: WAT sequence: 89
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 89>
+Created a new atom named: H1 within residue: .R<WAT 89>
+Created a new atom named: H2 within residue: .R<WAT 89>
+Creating new UNIT for residue: WAT sequence: 90
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 90>
+Created a new atom named: H1 within residue: .R<WAT 90>
+Created a new atom named: H2 within residue: .R<WAT 90>
+Creating new UNIT for residue: WAT sequence: 91
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 91>
+Created a new atom named: H1 within residue: .R<WAT 91>
+Created a new atom named: H2 within residue: .R<WAT 91>
+Creating new UNIT for residue: WAT sequence: 92
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 92>
+Created a new atom named: H1 within residue: .R<WAT 92>
+Created a new atom named: H2 within residue: .R<WAT 92>
+Creating new UNIT for residue: WAT sequence: 93
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 93>
+Created a new atom named: H1 within residue: .R<WAT 93>
+Created a new atom named: H2 within residue: .R<WAT 93>
+Creating new UNIT for residue: WAT sequence: 94
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 94>
+Created a new atom named: H1 within residue: .R<WAT 94>
+Created a new atom named: H2 within residue: .R<WAT 94>
+Creating new UNIT for residue: WAT sequence: 95
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 95>
+Created a new atom named: H1 within residue: .R<WAT 95>
+Created a new atom named: H2 within residue: .R<WAT 95>
+Creating new UNIT for residue: WAT sequence: 96
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 96>
+Created a new atom named: H1 within residue: .R<WAT 96>
+Created a new atom named: H2 within residue: .R<WAT 96>
+Creating new UNIT for residue: WAT sequence: 97
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 97>
+Created a new atom named: H1 within residue: .R<WAT 97>
+Created a new atom named: H2 within residue: .R<WAT 97>
+Creating new UNIT for residue: WAT sequence: 98
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 98>
+Created a new atom named: H1 within residue: .R<WAT 98>
+Created a new atom named: H2 within residue: .R<WAT 98>
+Creating new UNIT for residue: WAT sequence: 99
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 99>
+Created a new atom named: H1 within residue: .R<WAT 99>
+Created a new atom named: H2 within residue: .R<WAT 99>
+Creating new UNIT for residue: WAT sequence: 100
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 100>
+Created a new atom named: H1 within residue: .R<WAT 100>
+Created a new atom named: H2 within residue: .R<WAT 100>
+Creating new UNIT for residue: WAT sequence: 101
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 101>
+Created a new atom named: H1 within residue: .R<WAT 101>
+Created a new atom named: H2 within residue: .R<WAT 101>
+Creating new UNIT for residue: WAT sequence: 102
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 102>
+Created a new atom named: H1 within residue: .R<WAT 102>
+Created a new atom named: H2 within residue: .R<WAT 102>
+Creating new UNIT for residue: WAT sequence: 103
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 103>
+Created a new atom named: H1 within residue: .R<WAT 103>
+Created a new atom named: H2 within residue: .R<WAT 103>
+Creating new UNIT for residue: WAT sequence: 104
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 104>
+Created a new atom named: H1 within residue: .R<WAT 104>
+Created a new atom named: H2 within residue: .R<WAT 104>
+Creating new UNIT for residue: WAT sequence: 105
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 105>
+Created a new atom named: H1 within residue: .R<WAT 105>
+Created a new atom named: H2 within residue: .R<WAT 105>
+Creating new UNIT for residue: WAT sequence: 106
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 106>
+Created a new atom named: H1 within residue: .R<WAT 106>
+Created a new atom named: H2 within residue: .R<WAT 106>
+Creating new UNIT for residue: WAT sequence: 107
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 107>
+Created a new atom named: H1 within residue: .R<WAT 107>
+Created a new atom named: H2 within residue: .R<WAT 107>
+Creating new UNIT for residue: WAT sequence: 108
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 108>
+Created a new atom named: H1 within residue: .R<WAT 108>
+Created a new atom named: H2 within residue: .R<WAT 108>
+Creating new UNIT for residue: WAT sequence: 109
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 109>
+Created a new atom named: H1 within residue: .R<WAT 109>
+Created a new atom named: H2 within residue: .R<WAT 109>
+Creating new UNIT for residue: WAT sequence: 110
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 110>
+Created a new atom named: H1 within residue: .R<WAT 110>
+Created a new atom named: H2 within residue: .R<WAT 110>
+Creating new UNIT for residue: WAT sequence: 111
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 111>
+Created a new atom named: H1 within residue: .R<WAT 111>
+Created a new atom named: H2 within residue: .R<WAT 111>
+Creating new UNIT for residue: WAT sequence: 112
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 112>
+Created a new atom named: H1 within residue: .R<WAT 112>
+Created a new atom named: H2 within residue: .R<WAT 112>
+Creating new UNIT for residue: WAT sequence: 113
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 113>
+Created a new atom named: H1 within residue: .R<WAT 113>
+Created a new atom named: H2 within residue: .R<WAT 113>
+Creating new UNIT for residue: WAT sequence: 114
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 114>
+Created a new atom named: H1 within residue: .R<WAT 114>
+Created a new atom named: H2 within residue: .R<WAT 114>
+Creating new UNIT for residue: WAT sequence: 115
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 115>
+Created a new atom named: H1 within residue: .R<WAT 115>
+Created a new atom named: H2 within residue: .R<WAT 115>
+Creating new UNIT for residue: WAT sequence: 116
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 116>
+Created a new atom named: H1 within residue: .R<WAT 116>
+Created a new atom named: H2 within residue: .R<WAT 116>
+Creating new UNIT for residue: WAT sequence: 117
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 117>
+Created a new atom named: H1 within residue: .R<WAT 117>
+Created a new atom named: H2 within residue: .R<WAT 117>
+Creating new UNIT for residue: WAT sequence: 118
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 118>
+Created a new atom named: H1 within residue: .R<WAT 118>
+Created a new atom named: H2 within residue: .R<WAT 118>
+Creating new UNIT for residue: WAT sequence: 119
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 119>
+Created a new atom named: H1 within residue: .R<WAT 119>
+Created a new atom named: H2 within residue: .R<WAT 119>
+Creating new UNIT for residue: WAT sequence: 120
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 120>
+Created a new atom named: H1 within residue: .R<WAT 120>
+Created a new atom named: H2 within residue: .R<WAT 120>
+Creating new UNIT for residue: WAT sequence: 121
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 121>
+Created a new atom named: H1 within residue: .R<WAT 121>
+Created a new atom named: H2 within residue: .R<WAT 121>
+Creating new UNIT for residue: WAT sequence: 122
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 122>
+Created a new atom named: H1 within residue: .R<WAT 122>
+Created a new atom named: H2 within residue: .R<WAT 122>
+Creating new UNIT for residue: WAT sequence: 123
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 123>
+Created a new atom named: H1 within residue: .R<WAT 123>
+Created a new atom named: H2 within residue: .R<WAT 123>
+Creating new UNIT for residue: WAT sequence: 124
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 124>
+Created a new atom named: H1 within residue: .R<WAT 124>
+Created a new atom named: H2 within residue: .R<WAT 124>
+Creating new UNIT for residue: WAT sequence: 125
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 125>
+Created a new atom named: H1 within residue: .R<WAT 125>
+Created a new atom named: H2 within residue: .R<WAT 125>
+Creating new UNIT for residue: WAT sequence: 126
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 126>
+Created a new atom named: H1 within residue: .R<WAT 126>
+Created a new atom named: H2 within residue: .R<WAT 126>
+Creating new UNIT for residue: WAT sequence: 127
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 127>
+Created a new atom named: H1 within residue: .R<WAT 127>
+Created a new atom named: H2 within residue: .R<WAT 127>
+Creating new UNIT for residue: WAT sequence: 128
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 128>
+Created a new atom named: H1 within residue: .R<WAT 128>
+Created a new atom named: H2 within residue: .R<WAT 128>
+Creating new UNIT for residue: WAT sequence: 129
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 129>
+Created a new atom named: H1 within residue: .R<WAT 129>
+Created a new atom named: H2 within residue: .R<WAT 129>
+Creating new UNIT for residue: WAT sequence: 130
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 130>
+Created a new atom named: H1 within residue: .R<WAT 130>
+Created a new atom named: H2 within residue: .R<WAT 130>
+Creating new UNIT for residue: WAT sequence: 131
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 131>
+Created a new atom named: H1 within residue: .R<WAT 131>
+Created a new atom named: H2 within residue: .R<WAT 131>
+Creating new UNIT for residue: WAT sequence: 132
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 132>
+Created a new atom named: H1 within residue: .R<WAT 132>
+Created a new atom named: H2 within residue: .R<WAT 132>
+Creating new UNIT for residue: WAT sequence: 133
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 133>
+Created a new atom named: H1 within residue: .R<WAT 133>
+Created a new atom named: H2 within residue: .R<WAT 133>
+Creating new UNIT for residue: WAT sequence: 134
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 134>
+Created a new atom named: H1 within residue: .R<WAT 134>
+Created a new atom named: H2 within residue: .R<WAT 134>
+Creating new UNIT for residue: WAT sequence: 135
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 135>
+Created a new atom named: H1 within residue: .R<WAT 135>
+Created a new atom named: H2 within residue: .R<WAT 135>
+Creating new UNIT for residue: WAT sequence: 136
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 136>
+Created a new atom named: H1 within residue: .R<WAT 136>
+Created a new atom named: H2 within residue: .R<WAT 136>
+Creating new UNIT for residue: WAT sequence: 137
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 137>
+Created a new atom named: H1 within residue: .R<WAT 137>
+Created a new atom named: H2 within residue: .R<WAT 137>
+Creating new UNIT for residue: WAT sequence: 138
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 138>
+Created a new atom named: H1 within residue: .R<WAT 138>
+Created a new atom named: H2 within residue: .R<WAT 138>
+Creating new UNIT for residue: WAT sequence: 139
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 139>
+Created a new atom named: H1 within residue: .R<WAT 139>
+Created a new atom named: H2 within residue: .R<WAT 139>
+Creating new UNIT for residue: WAT sequence: 140
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 140>
+Created a new atom named: H1 within residue: .R<WAT 140>
+Created a new atom named: H2 within residue: .R<WAT 140>
+Creating new UNIT for residue: WAT sequence: 141
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 141>
+Created a new atom named: H1 within residue: .R<WAT 141>
+Created a new atom named: H2 within residue: .R<WAT 141>
+Creating new UNIT for residue: WAT sequence: 142
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 142>
+Created a new atom named: H1 within residue: .R<WAT 142>
+Created a new atom named: H2 within residue: .R<WAT 142>
+Creating new UNIT for residue: WAT sequence: 143
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 143>
+Created a new atom named: H1 within residue: .R<WAT 143>
+Created a new atom named: H2 within residue: .R<WAT 143>
+Creating new UNIT for residue: WAT sequence: 144
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 144>
+Created a new atom named: H1 within residue: .R<WAT 144>
+Created a new atom named: H2 within residue: .R<WAT 144>
+Creating new UNIT for residue: WAT sequence: 145
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 145>
+Created a new atom named: H1 within residue: .R<WAT 145>
+Created a new atom named: H2 within residue: .R<WAT 145>
+Creating new UNIT for residue: WAT sequence: 146
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 146>
+Created a new atom named: H1 within residue: .R<WAT 146>
+Created a new atom named: H2 within residue: .R<WAT 146>
+Creating new UNIT for residue: WAT sequence: 147
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 147>
+Created a new atom named: H1 within residue: .R<WAT 147>
+Created a new atom named: H2 within residue: .R<WAT 147>
+Creating new UNIT for residue: WAT sequence: 148
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 148>
+Created a new atom named: H1 within residue: .R<WAT 148>
+Created a new atom named: H2 within residue: .R<WAT 148>
+Creating new UNIT for residue: WAT sequence: 149
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 149>
+Created a new atom named: H1 within residue: .R<WAT 149>
+Created a new atom named: H2 within residue: .R<WAT 149>
+Creating new UNIT for residue: WAT sequence: 150
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 150>
+Created a new atom named: H1 within residue: .R<WAT 150>
+Created a new atom named: H2 within residue: .R<WAT 150>
+Creating new UNIT for residue: WAT sequence: 151
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 151>
+Created a new atom named: H1 within residue: .R<WAT 151>
+Created a new atom named: H2 within residue: .R<WAT 151>
+Creating new UNIT for residue: WAT sequence: 152
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 152>
+Created a new atom named: H1 within residue: .R<WAT 152>
+Created a new atom named: H2 within residue: .R<WAT 152>
+Creating new UNIT for residue: WAT sequence: 153
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 153>
+Created a new atom named: H1 within residue: .R<WAT 153>
+Created a new atom named: H2 within residue: .R<WAT 153>
+Creating new UNIT for residue: WAT sequence: 154
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 154>
+Created a new atom named: H1 within residue: .R<WAT 154>
+Created a new atom named: H2 within residue: .R<WAT 154>
+Creating new UNIT for residue: WAT sequence: 155
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 155>
+Created a new atom named: H1 within residue: .R<WAT 155>
+Created a new atom named: H2 within residue: .R<WAT 155>
+Creating new UNIT for residue: WAT sequence: 156
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 156>
+Created a new atom named: H1 within residue: .R<WAT 156>
+Created a new atom named: H2 within residue: .R<WAT 156>
+Creating new UNIT for residue: WAT sequence: 157
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 157>
+Created a new atom named: H1 within residue: .R<WAT 157>
+Created a new atom named: H2 within residue: .R<WAT 157>
+Creating new UNIT for residue: WAT sequence: 158
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 158>
+Created a new atom named: H1 within residue: .R<WAT 158>
+Created a new atom named: H2 within residue: .R<WAT 158>
+Creating new UNIT for residue: WAT sequence: 159
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 159>
+Created a new atom named: H1 within residue: .R<WAT 159>
+Created a new atom named: H2 within residue: .R<WAT 159>
+Creating new UNIT for residue: WAT sequence: 160
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 160>
+Created a new atom named: H1 within residue: .R<WAT 160>
+Created a new atom named: H2 within residue: .R<WAT 160>
+Creating new UNIT for residue: WAT sequence: 161
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 161>
+Created a new atom named: H1 within residue: .R<WAT 161>
+Created a new atom named: H2 within residue: .R<WAT 161>
+Creating new UNIT for residue: WAT sequence: 162
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 162>
+Created a new atom named: H1 within residue: .R<WAT 162>
+Created a new atom named: H2 within residue: .R<WAT 162>
+Creating new UNIT for residue: WAT sequence: 163
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 163>
+Created a new atom named: H1 within residue: .R<WAT 163>
+Created a new atom named: H2 within residue: .R<WAT 163>
+Creating new UNIT for residue: WAT sequence: 164
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 164>
+Created a new atom named: H1 within residue: .R<WAT 164>
+Created a new atom named: H2 within residue: .R<WAT 164>
+Creating new UNIT for residue: WAT sequence: 165
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 165>
+Created a new atom named: H1 within residue: .R<WAT 165>
+Created a new atom named: H2 within residue: .R<WAT 165>
+Creating new UNIT for residue: WAT sequence: 166
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 166>
+Created a new atom named: H1 within residue: .R<WAT 166>
+Created a new atom named: H2 within residue: .R<WAT 166>
+Creating new UNIT for residue: WAT sequence: 167
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 167>
+Created a new atom named: H1 within residue: .R<WAT 167>
+Created a new atom named: H2 within residue: .R<WAT 167>
+Creating new UNIT for residue: WAT sequence: 168
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 168>
+Created a new atom named: H1 within residue: .R<WAT 168>
+Created a new atom named: H2 within residue: .R<WAT 168>
+Creating new UNIT for residue: WAT sequence: 169
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 169>
+Created a new atom named: H1 within residue: .R<WAT 169>
+Created a new atom named: H2 within residue: .R<WAT 169>
+Creating new UNIT for residue: WAT sequence: 170
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 170>
+Created a new atom named: H1 within residue: .R<WAT 170>
+Created a new atom named: H2 within residue: .R<WAT 170>
+Creating new UNIT for residue: WAT sequence: 171
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 171>
+Created a new atom named: H1 within residue: .R<WAT 171>
+Created a new atom named: H2 within residue: .R<WAT 171>
+Creating new UNIT for residue: WAT sequence: 172
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 172>
+Created a new atom named: H1 within residue: .R<WAT 172>
+Created a new atom named: H2 within residue: .R<WAT 172>
+Creating new UNIT for residue: WAT sequence: 173
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 173>
+Created a new atom named: H1 within residue: .R<WAT 173>
+Created a new atom named: H2 within residue: .R<WAT 173>
+Creating new UNIT for residue: WAT sequence: 174
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 174>
+Created a new atom named: H1 within residue: .R<WAT 174>
+Created a new atom named: H2 within residue: .R<WAT 174>
+Creating new UNIT for residue: WAT sequence: 175
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 175>
+Created a new atom named: H1 within residue: .R<WAT 175>
+Created a new atom named: H2 within residue: .R<WAT 175>
+Creating new UNIT for residue: WAT sequence: 176
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 176>
+Created a new atom named: H1 within residue: .R<WAT 176>
+Created a new atom named: H2 within residue: .R<WAT 176>
+Creating new UNIT for residue: WAT sequence: 177
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 177>
+Created a new atom named: H1 within residue: .R<WAT 177>
+Created a new atom named: H2 within residue: .R<WAT 177>
+Creating new UNIT for residue: WAT sequence: 178
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 178>
+Created a new atom named: H1 within residue: .R<WAT 178>
+Created a new atom named: H2 within residue: .R<WAT 178>
+Creating new UNIT for residue: WAT sequence: 179
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 179>
+Created a new atom named: H1 within residue: .R<WAT 179>
+Created a new atom named: H2 within residue: .R<WAT 179>
+Creating new UNIT for residue: WAT sequence: 180
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 180>
+Created a new atom named: H1 within residue: .R<WAT 180>
+Created a new atom named: H2 within residue: .R<WAT 180>
+Creating new UNIT for residue: WAT sequence: 181
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 181>
+Created a new atom named: H1 within residue: .R<WAT 181>
+Created a new atom named: H2 within residue: .R<WAT 181>
+Creating new UNIT for residue: WAT sequence: 182
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 182>
+Created a new atom named: H1 within residue: .R<WAT 182>
+Created a new atom named: H2 within residue: .R<WAT 182>
+Creating new UNIT for residue: WAT sequence: 183
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 183>
+Created a new atom named: H1 within residue: .R<WAT 183>
+Created a new atom named: H2 within residue: .R<WAT 183>
+Creating new UNIT for residue: WAT sequence: 184
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 184>
+Created a new atom named: H1 within residue: .R<WAT 184>
+Created a new atom named: H2 within residue: .R<WAT 184>
+Creating new UNIT for residue: WAT sequence: 185
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 185>
+Created a new atom named: H1 within residue: .R<WAT 185>
+Created a new atom named: H2 within residue: .R<WAT 185>
+Creating new UNIT for residue: WAT sequence: 186
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 186>
+Created a new atom named: H1 within residue: .R<WAT 186>
+Created a new atom named: H2 within residue: .R<WAT 186>
+Creating new UNIT for residue: WAT sequence: 187
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 187>
+Created a new atom named: H1 within residue: .R<WAT 187>
+Created a new atom named: H2 within residue: .R<WAT 187>
+Creating new UNIT for residue: WAT sequence: 188
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 188>
+Created a new atom named: H1 within residue: .R<WAT 188>
+Created a new atom named: H2 within residue: .R<WAT 188>
+Creating new UNIT for residue: WAT sequence: 189
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 189>
+Created a new atom named: H1 within residue: .R<WAT 189>
+Created a new atom named: H2 within residue: .R<WAT 189>
+Creating new UNIT for residue: WAT sequence: 190
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 190>
+Created a new atom named: H1 within residue: .R<WAT 190>
+Created a new atom named: H2 within residue: .R<WAT 190>
+Creating new UNIT for residue: WAT sequence: 191
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 191>
+Created a new atom named: H1 within residue: .R<WAT 191>
+Created a new atom named: H2 within residue: .R<WAT 191>
+Creating new UNIT for residue: WAT sequence: 192
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 192>
+Created a new atom named: H1 within residue: .R<WAT 192>
+Created a new atom named: H2 within residue: .R<WAT 192>
+Creating new UNIT for residue: WAT sequence: 193
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 193>
+Created a new atom named: H1 within residue: .R<WAT 193>
+Created a new atom named: H2 within residue: .R<WAT 193>
+Creating new UNIT for residue: WAT sequence: 194
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 194>
+Created a new atom named: H1 within residue: .R<WAT 194>
+Created a new atom named: H2 within residue: .R<WAT 194>
+Creating new UNIT for residue: WAT sequence: 195
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 195>
+Created a new atom named: H1 within residue: .R<WAT 195>
+Created a new atom named: H2 within residue: .R<WAT 195>
+Creating new UNIT for residue: WAT sequence: 196
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 196>
+Created a new atom named: H1 within residue: .R<WAT 196>
+Created a new atom named: H2 within residue: .R<WAT 196>
+Creating new UNIT for residue: WAT sequence: 197
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 197>
+Created a new atom named: H1 within residue: .R<WAT 197>
+Created a new atom named: H2 within residue: .R<WAT 197>
+Creating new UNIT for residue: WAT sequence: 198
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 198>
+Created a new atom named: H1 within residue: .R<WAT 198>
+Created a new atom named: H2 within residue: .R<WAT 198>
+Creating new UNIT for residue: WAT sequence: 199
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 199>
+Created a new atom named: H1 within residue: .R<WAT 199>
+Created a new atom named: H2 within residue: .R<WAT 199>
+Creating new UNIT for residue: WAT sequence: 200
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 200>
+Created a new atom named: H1 within residue: .R<WAT 200>
+Created a new atom named: H2 within residue: .R<WAT 200>
+Creating new UNIT for residue: WAT sequence: 201
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 201>
+Created a new atom named: H1 within residue: .R<WAT 201>
+Created a new atom named: H2 within residue: .R<WAT 201>
+Creating new UNIT for residue: WAT sequence: 202
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 202>
+Created a new atom named: H1 within residue: .R<WAT 202>
+Created a new atom named: H2 within residue: .R<WAT 202>
+Creating new UNIT for residue: WAT sequence: 203
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 203>
+Created a new atom named: H1 within residue: .R<WAT 203>
+Created a new atom named: H2 within residue: .R<WAT 203>
+Creating new UNIT for residue: WAT sequence: 204
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 204>
+Created a new atom named: H1 within residue: .R<WAT 204>
+Created a new atom named: H2 within residue: .R<WAT 204>
+Creating new UNIT for residue: WAT sequence: 205
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 205>
+Created a new atom named: H1 within residue: .R<WAT 205>
+Created a new atom named: H2 within residue: .R<WAT 205>
+Creating new UNIT for residue: WAT sequence: 206
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 206>
+Created a new atom named: H1 within residue: .R<WAT 206>
+Created a new atom named: H2 within residue: .R<WAT 206>
+Creating new UNIT for residue: WAT sequence: 207
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 207>
+Created a new atom named: H1 within residue: .R<WAT 207>
+Created a new atom named: H2 within residue: .R<WAT 207>
+Creating new UNIT for residue: WAT sequence: 208
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 208>
+Created a new atom named: H1 within residue: .R<WAT 208>
+Created a new atom named: H2 within residue: .R<WAT 208>
+Creating new UNIT for residue: WAT sequence: 209
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 209>
+Created a new atom named: H1 within residue: .R<WAT 209>
+Created a new atom named: H2 within residue: .R<WAT 209>
+Creating new UNIT for residue: WAT sequence: 210
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 210>
+Created a new atom named: H1 within residue: .R<WAT 210>
+Created a new atom named: H2 within residue: .R<WAT 210>
+Creating new UNIT for residue: WAT sequence: 211
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 211>
+Created a new atom named: H1 within residue: .R<WAT 211>
+Created a new atom named: H2 within residue: .R<WAT 211>
+Creating new UNIT for residue: WAT sequence: 212
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 212>
+Created a new atom named: H1 within residue: .R<WAT 212>
+Created a new atom named: H2 within residue: .R<WAT 212>
+Creating new UNIT for residue: WAT sequence: 213
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 213>
+Created a new atom named: H1 within residue: .R<WAT 213>
+Created a new atom named: H2 within residue: .R<WAT 213>
+Creating new UNIT for residue: WAT sequence: 214
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 214>
+Created a new atom named: H1 within residue: .R<WAT 214>
+Created a new atom named: H2 within residue: .R<WAT 214>
+Creating new UNIT for residue: WAT sequence: 215
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 215>
+Created a new atom named: H1 within residue: .R<WAT 215>
+Created a new atom named: H2 within residue: .R<WAT 215>
+Creating new UNIT for residue: WAT sequence: 216
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 216>
+Created a new atom named: H1 within residue: .R<WAT 216>
+Created a new atom named: H2 within residue: .R<WAT 216>
+Creating new UNIT for residue: WAT sequence: 217
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 217>
+Created a new atom named: H1 within residue: .R<WAT 217>
+Created a new atom named: H2 within residue: .R<WAT 217>
+Creating new UNIT for residue: WAT sequence: 218
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 218>
+Created a new atom named: H1 within residue: .R<WAT 218>
+Created a new atom named: H2 within residue: .R<WAT 218>
+Creating new UNIT for residue: WAT sequence: 219
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 219>
+Created a new atom named: H1 within residue: .R<WAT 219>
+Created a new atom named: H2 within residue: .R<WAT 219>
+Creating new UNIT for residue: WAT sequence: 220
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 220>
+Created a new atom named: H1 within residue: .R<WAT 220>
+Created a new atom named: H2 within residue: .R<WAT 220>
+Creating new UNIT for residue: WAT sequence: 221
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 221>
+Created a new atom named: H1 within residue: .R<WAT 221>
+Created a new atom named: H2 within residue: .R<WAT 221>
+Creating new UNIT for residue: WAT sequence: 222
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 222>
+Created a new atom named: H1 within residue: .R<WAT 222>
+Created a new atom named: H2 within residue: .R<WAT 222>
+Creating new UNIT for residue: WAT sequence: 223
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 223>
+Created a new atom named: H1 within residue: .R<WAT 223>
+Created a new atom named: H2 within residue: .R<WAT 223>
+Creating new UNIT for residue: WAT sequence: 224
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 224>
+Created a new atom named: H1 within residue: .R<WAT 224>
+Created a new atom named: H2 within residue: .R<WAT 224>
+Creating new UNIT for residue: WAT sequence: 225
+Starting new chain with 
+Created a new atom named: O within residue: .R<WAT 225>
+Created a new atom named: H1 within residue: .R<WAT 225>
+Created a new atom named: H2 within residue: .R<WAT 225>
+  total atoms in file: 688
+  Leap added 7 missing atoms according to residue templates:
+       1 Heavy
+       6 H / lone pairs
+  The file contained 673 atoms not in residue templates
+> mol = sequence { ACE ALA ALA NME }
+Sequence: ACE
+Sequence: ALA
+Sequence: ALA
+Sequence: NME
+> saveamberparm mol ala2nw.prmtop ala2nw.crd
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 6 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+ (no restraints)
+> ls
+
+Error: Error from the parser: 
+       syntax error.
+       Check for typos, misspellings, etc.
+       Try help on the command name and desc on the command arguments.
+
+> savepdb
+
+Error: savePdb: Improper number of arguments!
+usage:  savePdb <object> <filename>
+> savepdb mol ala2.pdb
+Writing pdb file: ala2.pdb
+> mol = sequence { ACE ALA NME }
+Sequence: ACE
+Sequence: ALA
+Sequence: NME
+> saveamberparm mol ala2nw.prmtop ala2nw.crd
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 4 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+ (no restraints)
+> savepdb mol ala2.pdb
+Writing pdb file: ala2.pdb
+log started: Fri Oct 14 11:26:19 2022
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the ff19SB force field
+>> # ----- NOTE: this is designed for PDB format 3!
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "H"   "H" "sp3" }
+>> 	{ "HO"  "H" "sp3" }
+>> 	{ "HS"  "H" "sp3" }
+>> 	{ "H1"  "H" "sp3" }
+>> 	{ "H2"  "H" "sp3" }
+>> 	{ "H3"  "H" "sp3" }
+>> 	{ "H4"  "H" "sp3" }
+>> 	{ "H5"  "H" "sp3" }
+>> 	{ "HW"  "H" "sp3" }
+>> 	{ "HC"  "H" "sp3" }
+>> 	{ "HA"  "H" "sp3" }
+>> 	{ "HP"  "H" "sp3" }
+>> 	{ "HZ"  "H" "sp3" }
+>> 	{ "OH"  "O" "sp3" }
+>> 	{ "OS"  "O" "sp3" }
+>> 	{ "O"   "O" "sp2" }
+>> 	{ "O2"  "O" "sp2" }
+>> 	{ "OP"  "O" "sp2" }
+>> 	{ "OW"  "O" "sp3" }
+>> 	{ "CT"  "C" "sp3" }
+>> 	{ "CX"  "C" "sp3" }
+>> 	{ "XC"  "C" "sp3" }
+>> 	{ "C8"  "C" "sp3" }
+>> 	{ "2C"  "C" "sp3" }
+>> 	{ "3C"  "C" "sp3" }
+>> 	{ "CH"  "C" "sp3" }
+>> 	{ "CS"  "C" "sp2" }
+>> 	{ "C"   "C" "sp2" }
+>> 	{ "CO"   "C" "sp2" }
+>> 	{ "C*"  "C" "sp2" }
+>> 	{ "CA"  "C" "sp2" }
+>> 	{ "CB"  "C" "sp2" }
+>> 	{ "CC"  "C" "sp2" }
+>> 	{ "CN"  "C" "sp2" }
+>> 	{ "CM"  "C" "sp2" }
+>> 	{ "CK"  "C" "sp2" }
+>> 	{ "CQ"  "C" "sp2" }
+>> 	{ "CD"  "C" "sp2" }
+>> 	{ "C5"  "C" "sp2" }
+>> 	{ "C4"  "C" "sp2" }
+>> 	{ "CP"  "C" "sp2" }
+>> 	{ "CI"  "C" "sp3" }
+>> 	{ "CJ"  "C" "sp2" }
+>> 	{ "CW"  "C" "sp2" }
+>> 	{ "CV"  "C" "sp2" }
+>> 	{ "CR"  "C" "sp2" }
+>> 	{ "CA"  "C" "sp2" }
+>> 	{ "CY"  "C" "sp2" }
+>> 	{ "C0"  "Ca" "sp3" }
+>> 	{ "MG"  "Mg" "sp3" }
+>> 	{ "N"   "N" "sp2" }
+>> 	{ "NA"  "N" "sp2" }
+>> 	{ "N2"  "N" "sp2" }
+>> 	{ "N*"  "N" "sp2" }
+>> 	{ "NP"  "N" "sp2" }
+>> 	{ "NQ"  "N" "sp2" }
+>> 	{ "NB"  "N" "sp2" }
+>> 	{ "NC"  "N" "sp2" }
+>> 	{ "NT"  "N" "sp3" }
+>> 	{ "NY"  "N" "sp2" }
+>> 	{ "N3"  "N" "sp3" }
+>> 	{ "S"   "S" "sp3" }
+>> 	{ "SH"  "S" "sp3" }
+>> 	{ "P"   "P" "sp3" }
+>> 	{ "LP"  ""  "sp3" }
+>> 	{ "EP"  ""  "sp3" }
+>> 	{ "F"   "F" "sp3" }
+>> 	{ "Cl"  "Cl" "sp3" }
+>> 	{ "Br"  "Br" "sp3" }
+>> 	{ "I"   "I"  "sp3" }
+>> }
+>> #
+>> #	Load the main parameter set.
+>> #
+>> set default cmap on
+>> parm19 = loadamberparams parm19.dat
+Loading parameters: /home/martin/anaconda3/envs/torchmd/dat/leap/parm/parm19.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA + ff19SB
+(UNKNOWN ATOM TYPE: Zn)
+(UNKNOWN ATOM TYPE: EP)
+>> frcmod19SB = loadamberparams frcmod.ff19SB
+Loading parameters: /home/martin/anaconda3/envs/torchmd/dat/leap/parm/frcmod.ff19SB
+Reading force field modification type file (frcmod)
+Reading title:
+ff19SB AA-specific backbone CMAPs for protein 07/25/2019
+>> #
+>> #	Load main chain and terminating amino acid libraries
+>> #
+>> loadOff amino19.lib
+Loading library: /home/martin/anaconda3/envs/torchmd/dat/leap/lib/amino19.lib
+Loading: ALA
+Loading: ARG
+Loading: ASH
+Loading: ASN
+Loading: ASP
+Loading: CYM
+Loading: CYS
+Loading: CYX
+Loading: GLH
+Loading: GLN
+Loading: GLU
+Loading: GLY
+Loading: HID
+Loading: HIE
+Loading: HIP
+Loading: HYP
+Loading: ILE
+Loading: LEU
+Loading: LYN
+Loading: LYS
+Loading: MET
+Loading: PHE
+Loading: PRO
+Loading: SER
+Loading: THR
+Loading: TRP
+Loading: TYR
+Loading: VAL
+>> loadOff aminoct12.lib
+Loading library: /home/martin/anaconda3/envs/torchmd/dat/leap/lib/aminoct12.lib
+Loading: CALA
+Loading: CARG
+Loading: CASN
+Loading: CASP
+Loading: CCYS
+Loading: CCYX
+Loading: CGLN
+Loading: CGLU
+Loading: CGLY
+Loading: CHID
+Loading: CHIE
+Loading: CHIP
+Loading: CHYP
+Loading: CILE
+Loading: CLEU
+Loading: CLYS
+Loading: CMET
+Loading: CPHE
+Loading: CPRO
+Loading: CSER
+Loading: CTHR
+Loading: CTRP
+Loading: CTYR
+Loading: CVAL
+Loading: NHE
+Loading: NME
+>> loadOff aminont12.lib
+Loading library: /home/martin/anaconda3/envs/torchmd/dat/leap/lib/aminont12.lib
+Loading: ACE
+Loading: NALA
+Loading: NARG
+Loading: NASN
+Loading: NASP
+Loading: NCYS
+Loading: NCYX
+Loading: NGLN
+Loading: NGLU
+Loading: NGLY
+Loading: NHID
+Loading: NHIE
+Loading: NHIP
+Loading: NILE
+Loading: NLEU
+Loading: NLYS
+Loading: NMET
+Loading: NPHE
+Loading: NPRO
+Loading: NSER
+Loading: NTHR
+Loading: NTRP
+Loading: NTYR
+Loading: NVAL
+>> 
+>> #
+>> #	Define the PDB name map for the amino acids
+>> #
+>> addPdbResMap {
+>>   { 0 "HYP" "NHYP" } { 1 "HYP" "CHYP" }
+>>   { 0 "ALA" "NALA" } { 1 "ALA" "CALA" }
+>>   { 0 "ARG" "NARG" } { 1 "ARG" "CARG" }
+>>   { 0 "ASN" "NASN" } { 1 "ASN" "CASN" }
+>>   { 0 "ASP" "NASP" } { 1 "ASP" "CASP" }
+>>   { 0 "CYS" "NCYS" } { 1 "CYS" "CCYS" }
+>>   { 0 "CYX" "NCYX" } { 1 "CYX" "CCYX" }
+>>   { 0 "GLN" "NGLN" } { 1 "GLN" "CGLN" }
+>>   { 0 "GLU" "NGLU" } { 1 "GLU" "CGLU" }
+>>   { 0 "GLY" "NGLY" } { 1 "GLY" "CGLY" }
+>>   { 0 "HID" "NHID" } { 1 "HID" "CHID" }
+>>   { 0 "HIE" "NHIE" } { 1 "HIE" "CHIE" }
+>>   { 0 "HIP" "NHIP" } { 1 "HIP" "CHIP" }
+>>   { 0 "ILE" "NILE" } { 1 "ILE" "CILE" }
+>>   { 0 "LEU" "NLEU" } { 1 "LEU" "CLEU" }
+>>   { 0 "LYS" "NLYS" } { 1 "LYS" "CLYS" }
+>>   { 0 "MET" "NMET" } { 1 "MET" "CMET" }
+>>   { 0 "PHE" "NPHE" } { 1 "PHE" "CPHE" }
+>>   { 0 "PRO" "NPRO" } { 1 "PRO" "CPRO" }
+>>   { 0 "SER" "NSER" } { 1 "SER" "CSER" }
+>>   { 0 "THR" "NTHR" } { 1 "THR" "CTHR" }
+>>   { 0 "TRP" "NTRP" } { 1 "TRP" "CTRP" }
+>>   { 0 "TYR" "NTYR" } { 1 "TYR" "CTYR" }
+>>   { 0 "VAL" "NVAL" } { 1 "VAL" "CVAL" }
+>>   { 0 "HIS" "NHIS" } { 1 "HIS" "CHIS" }
+>> }
+>> 
+>> #
+>> # assume that most often proteins use HIE
+>> #
+>> NHIS = NHIE
+>> HIS = HIE
+>> CHIS = CHIE
+> 
+> mol = sequence { ACE ALA NME }
+Sequence: ACE
+Sequence: ALA
+Sequence: NME
+> saveamberparm mol ala2nw.prmtop ala2nw.crd
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 4 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+ (no restraints)
+> savepdb mol ala2.pdb
+Writing pdb file: ala2.pdb

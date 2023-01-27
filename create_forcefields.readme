@@ -1,0 +1,17 @@
+#source leaprc.protein.ff14SB
+source leaprc.protein.ff19SB
+mol = sequence { ACE ALA NME }
+saveamberparm mol ala2nw.prmtop ala2nw.crd
+savepdb mol ala2.pdb 
+
+#chignolin
+#source leaprc.protein.ff19SB 2019 does not work
+source leaprc.protein.ff14SB
+source leaprc.water.tip3p
+set default PBradii mbondi3
+#chig = sequence { GLY TYR ASP PRO GLU THR GLY THR TRP GLY }
+chig = loadpdb chignolin_folded.pdb
+savepdb chig chignolin_ext.pdb
+#saveamberparm chig chig_ext.parm7 chig_ext.crd
+saveamberparm chig chig_ext.prmtop chig_ext.crd
+

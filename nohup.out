@@ -1,0 +1,260 @@
+[I 10:22:51.104 NotebookApp] Serving notebooks from local directory: /home/sipkam/DiffSim/PublicRepo
+[I 10:22:51.104 NotebookApp] Jupyter Notebook 6.4.8 is running at:
+[I 10:22:51.104 NotebookApp] http://localhost:6543/?token=9d1ffdd74fa2b8c91ffe5c71a2b176558d84aa33dfc23a13
+[I 10:22:51.104 NotebookApp]  or http://127.0.0.1:6543/?token=9d1ffdd74fa2b8c91ffe5c71a2b176558d84aa33dfc23a13
+[I 10:22:51.104 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 10:22:51.106 NotebookApp] 
+    
+    To access the notebook, open this file in a browser:
+        file:///home/sipkam/.local/share/jupyter/runtime/nbserver-317885-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:6543/?token=9d1ffdd74fa2b8c91ffe5c71a2b176558d84aa33dfc23a13
+     or http://127.0.0.1:6543/?token=9d1ffdd74fa2b8c91ffe5c71a2b176558d84aa33dfc23a13
+[W 10:22:55.027 NotebookApp] 404 GET /api/contents/resultsMB?type=directory&_=1674475031650 (127.0.0.1): file or directory does not exist: 'resultsMB'
+[W 10:22:55.027 NotebookApp] file or directory does not exist: 'resultsMB'
+[W 10:22:55.028 NotebookApp] 404 GET /api/contents/resultsMB?type=directory&_=1674475031650 (127.0.0.1) 0.830000ms referer=http://localhost:6543/tree/resultsMB
+[W 10:22:57.645 NotebookApp] 404 GET /tree/resultsMB (127.0.0.1) 49.680000ms referer=None
+[I 10:23:09.421 NotebookApp] Kernel started: b4aa2306-23e2-4210-956a-8f944df37d8c, name: torchmdcuda
+[IPKernelApp] ERROR | No such comm target registered: jupyter.widget.version
+[IPKernelApp] ERROR | No such comm target registered: jupyter.widget.version
+[W 10:23:12.095 NotebookApp] Notebook AlanineDipeptideNotebook.ipynb is not trusted
+[I 10:23:13.916 NotebookApp] Kernel started: 07ba6b6e-19f0-4da1-85dc-2d98f7ae911c, name: torchmdcuda
+[I 10:23:15.091 NotebookApp] Kernel started: fb5c546c-9855-4dc8-945f-ab67a9877d78, name: torchmdcuda
+[IPKernelApp] ERROR | No such comm target registered: jupyter.widget.version
+[IPKernelApp] ERROR | No such comm target registered: jupyter.widget.version
+[IPKernelApp] ERROR | No such comm target registered: jupyter.widget.version
+[IPKernelApp] ERROR | No such comm target registered: jupyter.widget.version
+[I 10:23:26.977 NotebookApp] Starting buffering for fb5c546c-9855-4dc8-945f-ab67a9877d78:f72e9311de67424b8465da1c266a32bd
+[I 10:23:27.112 NotebookApp] Kernel restarted: fb5c546c-9855-4dc8-945f-ab67a9877d78
+[I 10:23:27.360 NotebookApp] Restoring connection for fb5c546c-9855-4dc8-945f-ab67a9877d78:f72e9311de67424b8465da1c266a32bd
+[I 10:23:27.864 NotebookApp] Replaying 3 buffered messages
+[IPKernelApp] ERROR | No such comm target registered: jupyter.widget.version
+[I 10:23:30.760 NotebookApp] Starting buffering for 07ba6b6e-19f0-4da1-85dc-2d98f7ae911c:0d4aecd5deb348f180f8819a09fac3a3
+[I 10:23:30.993 NotebookApp] Kernel restarted: 07ba6b6e-19f0-4da1-85dc-2d98f7ae911c
+[I 10:23:31.250 NotebookApp] Restoring connection for 07ba6b6e-19f0-4da1-85dc-2d98f7ae911c:0d4aecd5deb348f180f8819a09fac3a3
+[I 10:23:31.385 NotebookApp] Replaying 3 buffered messages
+[IPKernelApp] ERROR | No such comm target registered: jupyter.widget.version
+[I 10:23:33.959 NotebookApp] Starting buffering for b4aa2306-23e2-4210-956a-8f944df37d8c:a8b1c15e872045d38d0dbbafb028071a
+[I 10:23:34.192 NotebookApp] Kernel restarted: b4aa2306-23e2-4210-956a-8f944df37d8c
+[I 10:23:34.444 NotebookApp] Restoring connection for b4aa2306-23e2-4210-956a-8f944df37d8c:a8b1c15e872045d38d0dbbafb028071a
+[I 10:23:34.615 NotebookApp] Replaying 3 buffered messages
+[IPKernelApp] ERROR | No such comm target registered: jupyter.widget.version
+[I 10:23:53.145 NotebookApp] Kernel interrupted: b4aa2306-23e2-4210-956a-8f944df37d8c
+[I 10:24:01.715 NotebookApp] Starting buffering for b4aa2306-23e2-4210-956a-8f944df37d8c:a8b1c15e872045d38d0dbbafb028071a
+[I 10:24:02.451 NotebookApp] Kernel restarted: b4aa2306-23e2-4210-956a-8f944df37d8c
+[I 10:24:02.699 NotebookApp] Restoring connection for b4aa2306-23e2-4210-956a-8f944df37d8c:a8b1c15e872045d38d0dbbafb028071a
+[I 10:24:02.896 NotebookApp] Replaying 3 buffered messages
+[IPKernelApp] ERROR | No such comm target registered: jupyter.widget.version
+[I 10:25:09.761 NotebookApp] Saving file at /MullerBrownNotebook5D.ipynb
+[I 10:25:14.621 NotebookApp] Saving file at /MullerBrownNotebook2D.ipynb
+[I 10:25:15.216 NotebookApp] Saving file at /AlanineDipeptideNotebook.ipynb
+[I 10:27:10.045 NotebookApp] Saving file at /MullerBrownNotebook5D.ipynb
+[I 10:27:14.882 NotebookApp] Saving file at /MullerBrownNotebook2D.ipynb
+[I 10:27:15.257 NotebookApp] Saving file at /AlanineDipeptideNotebook.ipynb
+[I 10:29:10.104 NotebookApp] Saving file at /MullerBrownNotebook5D.ipynb
+[I 10:29:14.953 NotebookApp] Saving file at /MullerBrownNotebook2D.ipynb
+[I 10:29:15.360 NotebookApp] Saving file at /AlanineDipeptideNotebook.ipynb
+[I 10:31:10.143 NotebookApp] Saving file at /MullerBrownNotebook5D.ipynb
+[I 10:31:15.141 NotebookApp] Saving file at /MullerBrownNotebook2D.ipynb
+[I 10:31:15.454 NotebookApp] Saving file at /AlanineDipeptideNotebook.ipynb
+[I 10:31:29.359 NotebookApp] Starting buffering for fb5c546c-9855-4dc8-945f-ab67a9877d78:f72e9311de67424b8465da1c266a32bd
+[I 10:31:31.197 NotebookApp] Kernel restarted: fb5c546c-9855-4dc8-945f-ab67a9877d78
+[I 10:31:31.430 NotebookApp] Restoring connection for fb5c546c-9855-4dc8-945f-ab67a9877d78:f72e9311de67424b8465da1c266a32bd
+[I 10:31:31.631 NotebookApp] Replaying 18 buffered messages
+[IPKernelApp] ERROR | No such comm target registered: jupyter.widget.version
+[I 10:33:10.230 NotebookApp] Saving file at /MullerBrownNotebook5D.ipynb
+[I 10:33:15.159 NotebookApp] Saving file at /MullerBrownNotebook2D.ipynb
+[I 10:33:15.496 NotebookApp] Saving file at /AlanineDipeptideNotebook.ipynb
+[I 10:35:10.274 NotebookApp] Saving file at /MullerBrownNotebook5D.ipynb
+[I 10:35:10.930 NotebookApp] Starting buffering for fb5c546c-9855-4dc8-945f-ab67a9877d78:f72e9311de67424b8465da1c266a32bd
+[I 10:35:12.772 NotebookApp] Kernel restarted: fb5c546c-9855-4dc8-945f-ab67a9877d78
+[I 10:35:13.014 NotebookApp] Restoring connection for fb5c546c-9855-4dc8-945f-ab67a9877d78:f72e9311de67424b8465da1c266a32bd
+[I 10:35:13.168 NotebookApp] Replaying 18 buffered messages
+[IPKernelApp] ERROR | No such comm target registered: jupyter.widget.version
+[I 10:35:15.172 NotebookApp] Saving file at /MullerBrownNotebook2D.ipynb
+[I 10:35:15.524 NotebookApp] Saving file at /AlanineDipeptideNotebook.ipynb
+[I 10:37:10.261 NotebookApp] Saving file at /MullerBrownNotebook5D.ipynb
+[I 10:37:15.428 NotebookApp] Saving file at /MullerBrownNotebook2D.ipynb
+[I 10:37:15.632 NotebookApp] Saving file at /AlanineDipeptideNotebook.ipynb
+[I 10:39:10.348 NotebookApp] Saving file at /MullerBrownNotebook5D.ipynb
+[I 10:39:15.495 NotebookApp] Saving file at /MullerBrownNotebook2D.ipynb
+[I 10:39:15.723 NotebookApp] Saving file at /AlanineDipeptideNotebook.ipynb
+[I 10:41:10.416 NotebookApp] Saving file at /MullerBrownNotebook5D.ipynb
+[I 10:41:15.616 NotebookApp] Saving file at /AlanineDipeptideNotebook.ipynb
+[I 10:41:15.700 NotebookApp] Saving file at /MullerBrownNotebook2D.ipynb
+[I 10:43:10.387 NotebookApp] Saving file at /MullerBrownNotebook5D.ipynb
+[I 10:43:15.597 NotebookApp] Saving file at /AlanineDipeptideNotebook.ipynb
+[I 10:43:15.736 NotebookApp] Saving file at /MullerBrownNotebook2D.ipynb
+[I 10:45:10.423 NotebookApp] Saving file at /MullerBrownNotebook5D.ipynb
+[I 10:45:16.105 NotebookApp] Saving file at /AlanineDipeptideNotebook.ipynb
+[I 10:45:16.603 NotebookApp] Saving file at /MullerBrownNotebook2D.ipynb
+[I 10:47:10.454 NotebookApp] Saving file at /MullerBrownNotebook5D.ipynb
+[I 10:47:16.438 NotebookApp] Saving file at /AlanineDipeptideNotebook.ipynb
+[I 10:47:16.970 NotebookApp] Saving file at /MullerBrownNotebook2D.ipynb
+[I 10:49:10.494 NotebookApp] Saving file at /MullerBrownNotebook5D.ipynb
+[I 10:49:16.214 NotebookApp] Saving file at /AlanineDipeptideNotebook.ipynb
+[I 10:49:16.886 NotebookApp] Saving file at /MullerBrownNotebook2D.ipynb
+[I 10:51:10.534 NotebookApp] Saving file at /MullerBrownNotebook5D.ipynb
+[I 10:51:16.197 NotebookApp] Saving file at /AlanineDipeptideNotebook.ipynb
+[I 10:51:16.939 NotebookApp] Saving file at /MullerBrownNotebook2D.ipynb
+[I 10:53:10.556 NotebookApp] Saving file at /MullerBrownNotebook5D.ipynb
+[I 10:53:16.265 NotebookApp] Saving file at /AlanineDipeptideNotebook.ipynb
+[I 10:53:17.050 NotebookApp] Saving file at /MullerBrownNotebook2D.ipynb
+[I 10:55:10.543 NotebookApp] Saving file at /MullerBrownNotebook5D.ipynb
+[I 10:55:17.126 NotebookApp] Saving file at /MullerBrownNotebook2D.ipynb
+[I 10:57:10.628 NotebookApp] Saving file at /MullerBrownNotebook5D.ipynb
+[I 10:57:16.701 NotebookApp] Saving file at /AlanineDipeptideNotebook.ipynb
+[I 10:57:18.242 NotebookApp] Saving file at /MullerBrownNotebook2D.ipynb
+[I 10:59:10.610 NotebookApp] Saving file at /MullerBrownNotebook5D.ipynb
+[I 10:59:17.035 NotebookApp] Saving file at /AlanineDipeptideNotebook.ipynb
+[I 10:59:18.350 NotebookApp] Saving file at /MullerBrownNotebook2D.ipynb
+[I 11:01:10.669 NotebookApp] Saving file at /MullerBrownNotebook5D.ipynb
+[I 11:01:16.411 NotebookApp] Saving file at /AlanineDipeptideNotebook.ipynb
+[I 11:03:10.670 NotebookApp] Saving file at /MullerBrownNotebook5D.ipynb
+[I 11:03:16.417 NotebookApp] Saving file at /AlanineDipeptideNotebook.ipynb
+[I 11:05:10.689 NotebookApp] Saving file at /MullerBrownNotebook5D.ipynb
+[I 11:05:16.487 NotebookApp] Saving file at /AlanineDipeptideNotebook.ipynb
+[I 11:07:10.728 NotebookApp] Saving file at /MullerBrownNotebook5D.ipynb
+[I 11:07:16.494 NotebookApp] Saving file at /AlanineDipeptideNotebook.ipynb
+[I 11:09:10.726 NotebookApp] Saving file at /MullerBrownNotebook5D.ipynb
+[I 11:09:16.500 NotebookApp] Saving file at /AlanineDipeptideNotebook.ipynb
+[I 11:11:10.776 NotebookApp] Saving file at /MullerBrownNotebook5D.ipynb
+[I 11:11:16.840 NotebookApp] Saving file at /AlanineDipeptideNotebook.ipynb
+[I 11:13:10.761 NotebookApp] Saving file at /MullerBrownNotebook5D.ipynb
+[I 11:15:10.874 NotebookApp] Saving file at /MullerBrownNotebook5D.ipynb
+[I 11:15:16.874 NotebookApp] Saving file at /AlanineDipeptideNotebook.ipynb
+[I 11:17:11.103 NotebookApp] Saving file at /MullerBrownNotebook5D.ipynb
+[I 11:17:17.122 NotebookApp] Saving file at /AlanineDipeptideNotebook.ipynb
+[I 11:19:11.066 NotebookApp] Saving file at /MullerBrownNotebook5D.ipynb
+[I 11:19:16.917 NotebookApp] Saving file at /AlanineDipeptideNotebook.ipynb
+[I 11:21:10.931 NotebookApp] Saving file at /MullerBrownNotebook5D.ipynb
+[I 11:21:16.943 NotebookApp] Saving file at /AlanineDipeptideNotebook.ipynb
+[I 11:23:10.941 NotebookApp] Saving file at /MullerBrownNotebook5D.ipynb
+[I 11:23:16.975 NotebookApp] Saving file at /AlanineDipeptideNotebook.ipynb
+[I 11:25:10.965 NotebookApp] Saving file at /MullerBrownNotebook5D.ipynb
+[I 11:25:16.982 NotebookApp] Saving file at /AlanineDipeptideNotebook.ipynb
+[I 11:27:12.816 NotebookApp] Saving file at /MullerBrownNotebook5D.ipynb
+[I 11:27:16.962 NotebookApp] Saving file at /AlanineDipeptideNotebook.ipynb
+[I 11:29:12.836 NotebookApp] Saving file at /MullerBrownNotebook5D.ipynb
+[I 11:29:16.987 NotebookApp] Saving file at /AlanineDipeptideNotebook.ipynb
+[I 11:31:12.821 NotebookApp] Saving file at /MullerBrownNotebook5D.ipynb
+[I 11:33:12.819 NotebookApp] Saving file at /MullerBrownNotebook5D.ipynb
+[I 11:33:17.024 NotebookApp] Saving file at /AlanineDipeptideNotebook.ipynb
+[I 11:35:13.115 NotebookApp] Saving file at /MullerBrownNotebook5D.ipynb
+[I 11:35:17.020 NotebookApp] Saving file at /AlanineDipeptideNotebook.ipynb
+[I 11:37:12.860 NotebookApp] Saving file at /MullerBrownNotebook5D.ipynb
+[I 11:37:17.047 NotebookApp] Saving file at /AlanineDipeptideNotebook.ipynb
+[I 11:39:12.992 NotebookApp] Saving file at /MullerBrownNotebook5D.ipynb
+[I 11:39:17.092 NotebookApp] Saving file at /AlanineDipeptideNotebook.ipynb
+[I 11:41:13.117 NotebookApp] Saving file at /MullerBrownNotebook5D.ipynb
+[I 11:41:17.105 NotebookApp] Saving file at /AlanineDipeptideNotebook.ipynb
+[I 11:43:17.241 NotebookApp] Saving file at /AlanineDipeptideNotebook.ipynb
+[I 11:45:17.298 NotebookApp] Saving file at /AlanineDipeptideNotebook.ipynb
+[I 11:47:17.265 NotebookApp] Saving file at /AlanineDipeptideNotebook.ipynb
+[I 11:49:17.509 NotebookApp] Saving file at /AlanineDipeptideNotebook.ipynb
+[I 11:53:17.319 NotebookApp] Saving file at /AlanineDipeptideNotebook.ipynb
+[I 11:55:17.305 NotebookApp] Saving file at /AlanineDipeptideNotebook.ipynb
+[I 11:57:17.329 NotebookApp] Saving file at /AlanineDipeptideNotebook.ipynb
+[I 11:59:17.339 NotebookApp] Saving file at /AlanineDipeptideNotebook.ipynb
+[I 12:01:17.346 NotebookApp] Saving file at /AlanineDipeptideNotebook.ipynb
+[I 12:03:17.321 NotebookApp] Saving file at /AlanineDipeptideNotebook.ipynb
+[I 12:05:17.383 NotebookApp] Saving file at /AlanineDipeptideNotebook.ipynb
+[I 12:07:17.518 NotebookApp] Saving file at /AlanineDipeptideNotebook.ipynb
+[I 12:09:17.593 NotebookApp] Saving file at /AlanineDipeptideNotebook.ipynb
+[I 12:13:17.591 NotebookApp] Saving file at /AlanineDipeptideNotebook.ipynb
+[I 12:15:17.622 NotebookApp] Saving file at /AlanineDipeptideNotebook.ipynb
+[I 12:17:17.607 NotebookApp] Saving file at /AlanineDipeptideNotebook.ipynb
+[I 12:19:17.609 NotebookApp] Saving file at /AlanineDipeptideNotebook.ipynb
+[I 12:21:17.641 NotebookApp] Saving file at /AlanineDipeptideNotebook.ipynb
+[I 12:23:17.641 NotebookApp] Saving file at /AlanineDipeptideNotebook.ipynb
+[I 12:25:17.703 NotebookApp] Saving file at /AlanineDipeptideNotebook.ipynb
+[I 12:27:17.960 NotebookApp] Saving file at /AlanineDipeptideNotebook.ipynb
+[I 12:29:18.359 NotebookApp] Saving file at /AlanineDipeptideNotebook.ipynb
+[I 12:33:18.817 NotebookApp] Saving file at /AlanineDipeptideNotebook.ipynb
+[I 12:35:31.849 NotebookApp] Saving file at /AlanineDipeptideNotebook.ipynb
+[I 12:38:33.367 NotebookApp] Saving file at /AlanineDipeptideNotebook.ipynb
+[I 12:41:14.427 NotebookApp] Saving file at /AlanineDipeptideNotebook.ipynb
+[I 12:44:04.093 NotebookApp] Saving file at /AlanineDipeptideNotebook.ipynb
+[I 12:46:54.490 NotebookApp] Saving file at /AlanineDipeptideNotebook.ipynb
+[I 12:49:44.544 NotebookApp] Saving file at /AlanineDipeptideNotebook.ipynb
+[I 12:52:34.524 NotebookApp] Saving file at /AlanineDipeptideNotebook.ipynb
+[I 12:55:24.485 NotebookApp] Saving file at /AlanineDipeptideNotebook.ipynb
+[I 12:57:53.547 NotebookApp] Saving file at /AlanineDipeptideNotebook.ipynb
+[W 12:59:31.252 NotebookApp] WebSocket ping timeout after 119883 ms.
+[W 12:59:32.700 NotebookApp] WebSocket ping timeout after 119888 ms.
+[I 12:59:36.254 NotebookApp] Starting buffering for 07ba6b6e-19f0-4da1-85dc-2d98f7ae911c:0d4aecd5deb348f180f8819a09fac3a3
+[I 12:59:37.701 NotebookApp] Starting buffering for b4aa2306-23e2-4210-956a-8f944df37d8c:a8b1c15e872045d38d0dbbafb028071a
+[W 12:59:43.015 NotebookApp] WebSocket ping timeout after 119886 ms.
+[I 12:59:48.017 NotebookApp] Starting buffering for fb5c546c-9855-4dc8-945f-ab67a9877d78:f72e9311de67424b8465da1c266a32bd
+[I 10:54:49.656 NotebookApp] Kernel started: a375bf99-94d4-4b49-b1f7-0372f39637fb, name: torchmdcuda
+[IPKernelApp] ERROR | No such comm target registered: jupyter.widget.version
+[IPKernelApp] ERROR | No such comm target registered: jupyter.widget.version
+[I 10:54:55.569 NotebookApp] Starting buffering for a375bf99-94d4-4b49-b1f7-0372f39637fb:4dd44a68763b43cf8f6f85ef81eec36f
+[I 10:54:55.804 NotebookApp] Kernel restarted: a375bf99-94d4-4b49-b1f7-0372f39637fb
+[I 10:54:56.042 NotebookApp] Restoring connection for a375bf99-94d4-4b49-b1f7-0372f39637fb:4dd44a68763b43cf8f6f85ef81eec36f
+[I 10:54:56.170 NotebookApp] Replaying 3 buffered messages
+[IPKernelApp] ERROR | No such comm target registered: jupyter.widget.version
+[I 10:56:49.896 NotebookApp] Saving file at /resultsAla2/descriptor_basisD5p:0.1I:10000N150dt1.0T300g0.1/AlanineDipeptideNotebook-Copy1.ipynb
+[I 10:58:50.385 NotebookApp] Saving file at /resultsAla2/descriptor_basisD5p:0.1I:10000N150dt1.0T300g0.1/AlanineDipeptideNotebook-Copy1.ipynb
+[IPKernelApp] ERROR | No such comm target registered: jupyter.widget.version
+[IPKernelApp] ERROR | No such comm target registered: jupyter.widget.version
+[IPKernelApp] ERROR | No such comm target registered: jupyter.widget.version
+[I 11:00:12.242 NotebookApp] Discarding 496 buffered messages for fb5c546c-9855-4dc8-945f-ab67a9877d78:f72e9311de67424b8465da1c266a32bd
+[IPKernelApp] ERROR | No such comm target registered: jupyter.widget.version
+[I 11:03:35.793 NotebookApp] Starting buffering for fb5c546c-9855-4dc8-945f-ab67a9877d78:0181527abe9c4d4f8e9aab5fb651cf11
+[I 11:03:35.803 NotebookApp] Kernel shutdown: fb5c546c-9855-4dc8-945f-ab67a9877d78
+[I 11:03:40.600 NotebookApp] Starting buffering for b4aa2306-23e2-4210-956a-8f944df37d8c:4fe4e6f66901419b9d56e31f9e6ba88f
+[I 11:03:40.611 NotebookApp] Kernel shutdown: b4aa2306-23e2-4210-956a-8f944df37d8c
+[I 11:03:43.603 NotebookApp] Starting buffering for 07ba6b6e-19f0-4da1-85dc-2d98f7ae911c:0224ec5ae61546ff8b2197a1e554ea79
+[I 11:03:43.605 NotebookApp] Kernel shutdown: 07ba6b6e-19f0-4da1-85dc-2d98f7ae911c
+[I 11:04:50.247 NotebookApp] Saving file at /resultsAla2/descriptor_basisD5p:0.1I:10000N150dt1.0T300g0.1/AlanineDipeptideNotebook-Copy1.ipynb
+[I 11:11:20.368 NotebookApp] Saving file at /resultsAla2/descriptor_basisD5p:0.1I:10000N150dt1.0T300g0.1/AlanineDipeptideNotebook-Copy1.ipynb
+[I 11:12:50.251 NotebookApp] Saving file at /resultsAla2/descriptor_basisD5p:0.1I:10000N150dt1.0T300g0.1/AlanineDipeptideNotebook-Copy1.ipynb
+[I 11:14:50.482 NotebookApp] Saving file at /resultsAla2/descriptor_basisD5p:0.1I:10000N150dt1.0T300g0.1/AlanineDipeptideNotebook-Copy1.ipynb
+[E 11:41:15.023 NotebookApp] Exception restarting kernel
+    Traceback (most recent call last):
+      File "/usr/lib/python3/dist-packages/notebook/services/kernels/handlers.py", line 89, in post
+        yield maybe_future(km.restart_kernel(kernel_id))
+      File "/usr/lib/python3/dist-packages/tornado/gen.py", line 762, in run
+        value = future.result()
+      File "/usr/lib/python3.10/asyncio/futures.py", line 201, in result
+        raise self._exception.with_traceback(self._exception_tb)
+      File "/usr/lib/python3.10/asyncio/tasks.py", line 232, in __step
+        result = coro.send(None)
+      File "/usr/lib/python3/dist-packages/notebook/services/kernels/kernelmanager.py", line 313, in restart_kernel
+        self._check_kernel_id(kernel_id)
+      File "/usr/lib/python3/dist-packages/notebook/services/kernels/kernelmanager.py", line 394, in _check_kernel_id
+        raise web.HTTPError(404, u'Kernel does not exist: %s' % kernel_id)
+    tornado.web.HTTPError: HTTP 404: Not Found (Kernel does not exist: b4aa2306-23e2-4210-956a-8f944df37d8c)
+[E 11:41:15.048 NotebookApp] {
+      "Host": "localhost:6543",
+      "Accept": "application/json, text/javascript, */*; q=0.01",
+      "Referer": "http://localhost:6543/notebooks/MullerBrownNotebook5D.ipynb",
+      "User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:108.0) Gecko/20100101 Firefox/108.0"
+    }
+[E 11:41:15.048 NotebookApp] 500 POST /api/kernels/b4aa2306-23e2-4210-956a-8f944df37d8c/restart (127.0.0.1) 25.880000ms referer=http://localhost:6543/notebooks/MullerBrownNotebook5D.ipynb
+[W 11:41:15.183 NotebookApp] 404 DELETE /api/sessions/7a1476eb-c69c-42e2-9878-c05e031594cc (127.0.0.1): Session not found: session_id='7a1476eb-c69c-42e2-9878-c05e031594cc'
+[W 11:41:15.184 NotebookApp] Session not found: session_id='7a1476eb-c69c-42e2-9878-c05e031594cc'
+[W 11:41:15.184 NotebookApp] 404 DELETE /api/sessions/7a1476eb-c69c-42e2-9878-c05e031594cc (127.0.0.1) 0.980000ms referer=http://localhost:6543/notebooks/MullerBrownNotebook5D.ipynb
+[I 11:41:15.319 NotebookApp] Kernel started: 41998bca-884b-43dd-b17e-c2106c92af40, name: torchmdcuda
+[IPKernelApp] ERROR | No such comm target registered: jupyter.widget.version
+[I 11:42:09.998 NotebookApp] Saving file at /MullerBrownNotebook5D.ipynb
+[I 11:59:17.497 NotebookApp] Starting buffering for 41998bca-884b-43dd-b17e-c2106c92af40:4fe4e6f66901419b9d56e31f9e6ba88f
+[I 11:59:17.846 NotebookApp] Kernel restarted: 41998bca-884b-43dd-b17e-c2106c92af40
+[I 11:59:18.129 NotebookApp] Restoring connection for 41998bca-884b-43dd-b17e-c2106c92af40:4fe4e6f66901419b9d56e31f9e6ba88f
+[I 11:59:18.268 NotebookApp] Replaying 3 buffered messages
+[IPKernelApp] ERROR | No such comm target registered: jupyter.widget.version
+[I 12:00:07.437 NotebookApp] Saving file at /MullerBrownNotebook5D.ipynb
+[I 12:02:07.800 NotebookApp] Saving file at /MullerBrownNotebook5D.ipynb
+[I 12:04:07.906 NotebookApp] Saving file at /MullerBrownNotebook5D.ipynb
+[I 12:06:07.913 NotebookApp] Saving file at /MullerBrownNotebook5D.ipynb
+[I 12:08:08.055 NotebookApp] Saving file at /MullerBrownNotebook5D.ipynb
+[I 12:10:08.040 NotebookApp] Saving file at /MullerBrownNotebook5D.ipynb
+[I 12:12:08.066 NotebookApp] Saving file at /MullerBrownNotebook5D.ipynb
+[I 12:14:08.133 NotebookApp] Saving file at /MullerBrownNotebook5D.ipynb
+[I 12:16:08.172 NotebookApp] Saving file at /MullerBrownNotebook5D.ipynb
+[I 12:18:08.159 NotebookApp] Saving file at /MullerBrownNotebook5D.ipynb
+[W 12:20:48.130 NotebookApp] WebSocket ping timeout after 119887 ms.
+[I 12:20:53.131 NotebookApp] Starting buffering for 41998bca-884b-43dd-b17e-c2106c92af40:4fe4e6f66901419b9d56e31f9e6ba88f
+[W 12:20:56.042 NotebookApp] WebSocket ping timeout after 119887 ms.
+[I 12:21:01.044 NotebookApp] Starting buffering for a375bf99-94d4-4b49-b1f7-0372f39637fb:4dd44a68763b43cf8f6f85ef81eec36f
